@@ -56,6 +56,7 @@
         html {
             scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
+            scroll-padding-top: 0;
             overflow-y: scroll;
             height: 100%;
             background-color: #0a0a0a;
@@ -235,7 +236,7 @@
             padding: 6rem 4% 2rem 4%;
             max-width: 1400px;
             margin: 0 auto;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
@@ -461,8 +462,8 @@
         @media (max-width: 768px) {
             /* Hero section mobile - scrollable background */
             .hero {
-                min-height: 70vh;
-                height: 70vh;
+                min-height: 50vh;
+                height: 50vh;
                 padding-top: 5rem;
                 position: relative;
                 scroll-snap-align: start;
@@ -473,12 +474,13 @@
             .hero-video-bg {
                 position: relative !important;
                 width: 100%;
-                height: calc(70vh - 5rem);
+                height: calc(50vh - 5rem);
                 top: 0 !important;
                 left: 0 !important;
                 background-color: #DA972B;
                 background-image: url('/background-placeholder.jpg');
-                background-size: cover;
+                background-size: contain;
+                background-repeat: no-repeat;
                 background-position: center;
                 transform: translate3d(0, 0, 0);
                 -webkit-transform: translate3d(0, 0, 0);
@@ -508,18 +510,33 @@
             }
 
             #contact {
-                min-height: 100vh;
+                padding-top: 5rem;
+                min-height: 120vh;
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
             }
 
+            #contact h2 {
+                margin-bottom: 0.5rem;
+            }
+
             #contact .contact-intro {
                 flex: 0 0 auto;
+                margin-bottom: 1rem;
+            }
+
+            #contact .contact-intro p {
+                margin-bottom: 0.5rem;
+            }
+
+            #contact .contact-email {
+                margin: 0.5rem 0;
             }
 
             #contact form {
                 flex: 0 0 auto;
+                gap: 0.6rem;
             }
 
             h2 {
