@@ -240,7 +240,6 @@
             flex-direction: column;
             justify-content: flex-start;
             scroll-snap-align: start;
-            scroll-snap-stop: always;
             overflow-y: auto;
         }
 
@@ -461,8 +460,8 @@
         @media (max-width: 768px) {
             /* Hero section mobile - very compact for 16:9 video */
             .hero {
-                min-height: 40vh;
-                height: 40vh;
+                min-height: 45vh;
+                height: 45vh;
                 padding-top: 5rem;
                 position: relative;
             }
@@ -470,9 +469,9 @@
             .hero-video-bg {
                 position: relative;
                 width: 100%;
-                height: 40vh;
-                margin-top: -5rem;
-                padding-top: 5rem;
+                height: 45vh;
+                margin-top: 0;
+                padding-top: 0;
                 background-color: #DA972B;
                 background-image: url('/background-placeholder.jpg');
                 background-size: cover;
@@ -481,7 +480,7 @@
 
             .hero-video-bg img {
                 width: 100%;
-                height: 40vh;
+                height: 100%;
                 object-fit: cover;
                 display: block;
             }
@@ -498,7 +497,10 @@
                 padding: 5rem 5% 2rem 5%;
                 min-height: 100vh;
                 scroll-snap-align: start;
-                scroll-snap-stop: always;
+            }
+
+            #contact {
+                padding-top: 3.5rem;
             }
 
             h2 {
@@ -742,7 +744,7 @@
             <div id="password-section">
                 <input type="password" id="portfolio-password" placeholder="Enter password" style="width: 100%; max-width: 400px; padding: 1.2rem; background: var(--bg-dark); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;">
                 <br>
-                <button onclick="checkPortfolioPassword()" style="padding: 1.2rem 3rem; background: var(--text-primary); color: var(--bg-dark); border: none; font-weight: 500; cursor: pointer; font-size: 1rem; transition: all 0.2s; margin-top: 1rem;" onmouseover="this.style.background='#DA972B'; this.style.color='#ffffff';" onmouseout="this.style.background='#ffffff'; this.style.color='#0a0a0a';">View Portfolio</button>
+                <button onclick="checkPortfolioPassword()" style="padding: 1.2rem 3rem; background: var(--accent); color: #000000; border: none; font-weight: 500; cursor: pointer; font-size: 1rem; transition: all 0.2s; margin-top: 1rem;" onmouseover="this.style.background='var(--accent-hover)';" onmouseout="this.style.background='#DA972B';">View Portfolio</button>
                 <p id="password-error" style="color: var(--accent); font-size: 0.9rem; margin-top: 1rem; display: none;">Incorrect password</p>
             </div>
             
@@ -782,7 +784,7 @@
         <div class="contact-wrapper">
             <div class="contact-intro">
                 <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
-                <a href="/cdn-cgi/l/email-protection#d0b9beb6bf90b6b9b7a5a2b5e5bdb5b4b9b1feb3bfbd" class="contact-email"><span class="__cf_email__" data-cfemail="630a0d050c23050a04161106560e06070a024d000c0e">[email&#160;protected]</span></a>
+                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
             </div>
 
             <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -803,11 +805,11 @@
 
     <!-- Footer -->
     <footer>
-        <p><a href="/cdn-cgi/l/email-protection#b2dbdcd4ddf2d4dbd5c7c0d787dfd7d6dbd39cd1dddf"><span class="__cf_email__" data-cfemail="ee87808881ae8887899b9c8bdb838b8a878fc08d8183">[email&#160;protected]</span></a></p>
+        <p><a href="mailto:info@figure5media.com">info@figure5media.com</a></p>
         <p>© 2026 Figure 5 Media. All rights reserved.</p>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
