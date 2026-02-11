@@ -460,18 +460,18 @@
         @media (max-width: 768px) {
             /* Hero section mobile - very compact for 16:9 video */
             .hero {
-                min-height: 45vh;
-                height: 45vh;
-                padding-top: 5rem;
+                min-height: 50vh;
+                height: 50vh;
+                padding-top: 0;
                 position: relative;
             }
 
             .hero-video-bg {
-                position: relative;
+                position: absolute;
+                top: 5rem;
+                left: 0;
                 width: 100%;
-                height: 45vh;
-                margin-top: 0;
-                padding-top: 0;
+                height: calc(50vh - 5rem);
                 background-color: #DA972B;
                 background-image: url('/background-placeholder.jpg');
                 background-size: cover;
@@ -796,7 +796,7 @@
         <div class="contact-wrapper">
             <div class="contact-intro">
                 <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
-                <a href="/cdn-cgi/l/email-protection#056c6b636a45636c62707760306860616c642b666a68" class="contact-email"><span class="__cf_email__" data-cfemail="5d34333b321d3b343a282f3868303839343c733e3230">[email&#160;protected]</span></a>
+                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
             </div>
 
             <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -818,7 +818,7 @@
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: auto; padding-top: 3rem; padding-bottom: 2rem; text-align: center;">© 2026 Figure 5 Media. All rights reserved.</p>
     </section>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
