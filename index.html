@@ -161,7 +161,7 @@
             height: 100%;
             overflow: hidden;
             z-index: 0;
-            background-image: url('background-placeholder.jpg');
+            background-image: url('/background-placeholder.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -240,6 +240,7 @@
             flex-direction: column;
             justify-content: flex-start;
             scroll-snap-align: start;
+            scroll-snap-stop: always;
             overflow-y: auto;
         }
 
@@ -470,7 +471,8 @@
                 position: relative;
                 width: 100%;
                 height: 40vh;
-                background-image: url('background-placeholder.jpg');
+                background-color: #DA972B;
+                background-image: url('/background-placeholder.jpg');
                 background-size: cover;
                 background-position: center;
             }
@@ -494,6 +496,7 @@
                 padding: 5rem 5% 2rem 5%;
                 min-height: 100vh;
                 scroll-snap-align: start;
+                scroll-snap-stop: always;
             }
 
             h2 {
@@ -663,11 +666,12 @@
         <main id="main-content">
         <!-- Video Background Container -->
         <div class="hero-video-bg">
+            <img src="/background-placeholder.jpg" alt="Figure 5 Media background" style="width: 100%; height: 100%; object-fit: cover;">
             <!-- 
             TO ADD YOUR VIDEO:
             1. Save your video file as 'background.mp4' 
             2. Upload it to the same folder as this HTML file
-            3. Uncomment the line below and make sure the path matches your video filename
+            3. Replace the img tag above with the video tag below
             -->
             <!-- <video autoplay muted loop playsinline>
                 <source src="background.mp4" type="video/mp4">
