@@ -154,20 +154,20 @@
 
         /* Sections */
         section {
-            padding: 6rem 4% 2rem 4%;
+            padding: 5rem 4% 4rem 4%;
             max-width: 1400px;
             margin: 0 auto;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: space-between;
             scroll-snap-align: start;
             overflow-y: auto;
             position: relative;
         }
         h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            margin-bottom: 2rem;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            margin-bottom: 1rem;
             font-weight: 300;
             letter-spacing: -1.5px;
             color: var(--accent);
@@ -175,43 +175,50 @@
 
         /* Scroll arrows */
         .section-arrow {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
+            display: block;
+            text-align: center;
+            padding-top: 1.5rem;
             color: var(--text-secondary);
             font-size: 2rem;
             text-decoration: none;
             cursor: pointer;
             transition: color 0.2s;
-            z-index: 100;
         }
         .section-arrow:hover { color: var(--accent); }
+        .hero-arrow {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 0;
+            padding-top: 0;
+        }
 
         /* About */
-        .work-intro { max-width: 800px; margin-bottom: 1.5rem; }
+        .work-intro { max-width: 800px; margin-bottom: 0.75rem; }
         .work-intro p {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--text-secondary);
-            line-height: 1.7;
+            line-height: 1.6;
             font-weight: 300;
             letter-spacing: 0.01em;
         }
+        .work-intro p + p { margin-top: 0.75rem; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 1.5rem;
+            gap: 0;
+            margin-top: 0.75rem;
         }
         .service-card {
-            padding: 1.5rem 0;
+            padding: 0.9rem 1rem 0.9rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s;
         }
         .service-card:hover { border-top-color: var(--accent); transform: translateY(-3px); }
         .service-card:hover h3 { color: var(--accent); }
-        .service-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; font-weight: 500; letter-spacing: 0.02em; }
-        .service-card p { color: var(--text-secondary); font-size: 1rem; line-height: 1.6; font-weight: 300; }
+        .service-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; font-weight: 500; letter-spacing: 0.02em; }
+        .service-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; font-weight: 300; }
 
         /* Portfolio */
         .portfolio-gate {
@@ -232,11 +239,13 @@
         }
         .video-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(2, minmax(0, 380px));
+            gap: 0.75rem;
+            margin-top: 0.75rem;
             opacity: 0;
             animation: none;
+            flex: 1;
+            justify-content: center;
         }
         .video-grid.visible {
             animation: fadeIn 0.7s ease forwards;
@@ -263,53 +272,54 @@
             aspect-ratio: 16 / 9;
             background: #000;
         }
-        .video-info { padding: 1.25rem 1.5rem 1.5rem; }
-        .video-info h3 { font-size: 1.1rem; font-weight: 400; margin-bottom: 0.4rem; letter-spacing: -0.3px; }
-        .video-info p { color: var(--text-secondary); font-size: 0.9rem; font-weight: 300; line-height: 1.5; }
+        .video-info { padding: 0.75rem 1.25rem; }
+        .video-info h3 { font-size: 0.95rem; font-weight: 400; letter-spacing: -0.2px; }
 
         /* Contact */
-        .contact-wrapper { max-width: 700px; margin: 0 auto; }
-        .contact-intro { margin-bottom: 1.5rem; }
-        .contact-intro p { font-size: 1rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; }
+        .contact-wrapper { max-width: 600px; margin: 0 auto; }
+        .contact-intro { margin-bottom: 1rem; }
+        .contact-intro p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; }
         .contact-email {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             color: var(--accent);
             text-decoration: none;
             font-weight: 300;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
             display: inline-block;
-            margin: 1rem 0 0.5rem 0;
+            margin: 0.5rem 0 0 0;
             transition: color 0.2s;
         }
         .contact-email:hover { color: var(--accent-hover); }
-        form { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+        form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; max-width: 600px; }
         input, textarea {
-            padding: 1rem;
+            padding: 0.75rem 1rem;
             background: var(--bg-medium);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--text-primary);
-            font-size: 1rem;
+            font-size: 0.9rem;
             font-family: inherit;
             transition: all 0.2s;
             font-weight: 300;
         }
         input:focus, textarea:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,0.02); }
         input::placeholder, textarea::placeholder { color: var(--text-secondary); }
-        textarea { min-height: 80px; resize: vertical; }
+        textarea { min-height: 70px; resize: vertical; }
         button[type="submit"] {
-            padding: 1.2rem 3rem;
+            padding: 0.75rem 2.5rem;
             background: var(--accent);
             color: #000;
             border: none;
             font-weight: 500;
             cursor: pointer;
-            font-size: 1rem;
+            font-size: 0.9rem;
             transition: all 0.2s;
             letter-spacing: 0.5px;
             align-self: flex-start;
         }
+        #portfolio { padding-top: 5rem; padding-bottom: 3rem; }
+        #portfolio h2 { margin-bottom: 0.5rem; }
         button[type="submit"]:hover { background: var(--accent-hover); transform: translateY(-2px); }
-        #contact { padding-top: 6rem; }
+        #contact { padding-top: 5rem; }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -431,8 +441,8 @@
             <div class="hero-content">
                 <!-- Text will be in the video itself -->
             </div>
-            <a href="#about" class="section-arrow">↓</a>
         </main>
+        <a href="#about" class="section-arrow hero-arrow">↓</a>
     </section>
 
     <!-- About Section -->
@@ -476,10 +486,10 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <p style="color: var(--text-secondary); font-size: 1rem; font-weight: 300; line-height: 1.7; max-width: 700px; margin-bottom: 2rem;">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
+        <p style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem;">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
 
         <!-- Password Gate -->
-        <div id="password-section" class="portfolio-gate">
+        <div id="password-section" class="portfolio-gate" style="display:none;">
             <p>Portfolio samples are password protected due to client confidentiality.</p>
             <input type="password" id="portfolio-password" placeholder="Enter password"
                 style="width: 100%; max-width: 360px; padding: 1.2rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;"
@@ -495,7 +505,7 @@
         <!-- Portfolio Content — hidden until correct password entered -->
         <!-- VIDEO URLS: Replace each src with your GitHub Release URL:
              https://github.com/YOUR-USERNAME/YOUR-REPO/releases/download/v1.0/your-video.mp4 -->
-        <div id="portfolio-content" class="video-grid">
+        <div id="portfolio-content" class="video-grid visible">
             <div class="video-item">
                 <div class="video-wrapper">
                     <iframe
@@ -507,8 +517,7 @@
                     </iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project and client.</p>
+                    <h3>Google Earth Engine</h3>
                 </div>
             </div>
             <div class="video-item">
@@ -522,8 +531,7 @@
                     </iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project and client.</p>
+                    <h3>Discord | GDC 2025</h3>
                 </div>
             </div>
             <div class="video-item">
@@ -537,8 +545,7 @@
                     </iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project and client.</p>
+                    <h3>Vivian Health</h3>
                 </div>
             </div>
             <div class="video-item">
@@ -552,8 +559,7 @@
                     </iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Project Title</h3>
-                    <p>Brief description of the project and client.</p>
+                    <h3>2025 Ascend Leadership Summit</h3>
                 </div>
             </div>
         </div>
@@ -568,7 +574,7 @@
         <div class="contact-wrapper">
             <div class="contact-intro">
                 <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
-                <a href="/cdn-cgi/l/email-protection#82ebece4edc2e4ebe5f7f0e7b7efe7e6ebe3ace1edef" class="contact-email"><span class="__cf_email__" data-cfemail="f69f989099b6909f91838493c39b93929f97d895999b">[email&#160;protected]</span></a>
+                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
             </div>
 
             <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -585,16 +591,14 @@
             <p id="form-success" style="color: var(--accent); margin-top: 1rem; display: none;">Thanks! We'll get back to you soon.</p>
         </div>
         
-        <!-- Email link - desktop only -->
-        <a href="/cdn-cgi/l/email-protection#c5acaba3aa85a3aca2b0b7a0f0a8a0a1aca4eba6aaa8" class="section-arrow desktop-only-arrow" style="font-size: 1rem; text-decoration: none; color: var(--accent); bottom: 3rem;">
-            <span class="__cf_email__" data-cfemail="c5acaba3aa85a3aca2b0b7a0f0a8a0a1aca4eba6aaa8">[email&#160;protected]</span>
-        </a>
-        
-        <p class="desktop-only-copyright" style="color: var(--text-secondary); font-size: 0.85rem; position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); margin: 0;">© 2026 Figure 5 Media. All rights reserved.</p>
-        <p class="mobile-only-copyright" style="color: var(--text-secondary); font-size: 0.85rem; text-align: center; margin-top: auto; padding: 3rem 0 2rem 0; display: none;">© 2026 Figure 5 Media. All rights reserved.</p>
+        <!-- Bottom of contact: email + copyright centered -->
+        <div style="text-align: center; padding-top: 1.5rem;">
+            <a href="mailto:info@figure5media.com" class="desktop-only-arrow" style="font-size: 1rem; text-decoration: none; color: var(--accent); display: block; margin-bottom: 0.75rem;">info@figure5media.com</a>
+            <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2026 Figure 5 Media. All rights reserved.</p>
+        </div>
     </section>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
