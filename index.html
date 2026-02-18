@@ -221,6 +221,7 @@
             padding: 2.5rem 2rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: var(--bg-medium);
+            transition: opacity 0.4s ease;
         }
         .portfolio-gate p {
             color: var(--text-secondary);
@@ -234,6 +235,15 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 1rem;
+            opacity: 0;
+            animation: none;
+        }
+        .video-grid.visible {
+            animation: fadeIn 0.7s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
         .video-item {
             background: var(--bg-medium);
@@ -466,7 +476,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
-        
+
         <!-- Password Gate -->
         <div id="password-section" class="portfolio-gate">
             <p>Portfolio samples are password protected due to client confidentiality.</p>
@@ -480,71 +490,70 @@
                 onmouseout="this.style.background='#DA972B'">View Portfolio</button>
             <p id="password-error" style="color: var(--accent); font-size: 0.9rem; margin-top: 1rem; display: none;">Incorrect password. Please try again.</p>
         </div>
-        
-        <!-- Portfolio Content -->
-        <div id="portfolio-content" style="display: none; margin-top: 1rem;">
-            <div class="video-grid">
 
-                <!-- VIDEO SLOT 1
-                     Upload your video as 'video1.mp4' to the same folder as index.html.
-                     Replace "Project Title" and the description with your own text.
-                     To hide this slot, add style="display:none" to the outer div.
-                -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" poster="">
-                            <source src="video1.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project and client.</p>
-                    </div>
+        <!-- Portfolio Content — hidden until correct password entered -->
+        <!-- VIDEO URLS: Replace each src with your GitHub Release URL:
+             https://github.com/YOUR-USERNAME/YOUR-REPO/releases/download/v1.0/your-video.mp4 -->
+        <div id="portfolio-content" class="video-grid">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/6eJ3z_a2NyM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
                 </div>
-
-                <!-- VIDEO SLOT 2 — upload as 'video2.mp4' -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" poster="">
-                            <source src="video2.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project and client.</p>
-                    </div>
+                <div class="video-info">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project and client.</p>
                 </div>
-
-                <!-- VIDEO SLOT 3 — upload as 'video3.mp4' -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" poster="">
-                            <source src="video3.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project and client.</p>
-                    </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/FQ8WRW521vM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
                 </div>
-
-                <!-- VIDEO SLOT 4 — upload as 'video4.mp4' -->
-                <div class="video-item">
-                    <div class="video-wrapper">
-                        <video controls preload="metadata" poster="">
-                            <source src="video4.mp4" type="video/mp4">
-                            Your browser does not support HTML5 video.
-                        </video>
-                    </div>
-                    <div class="video-info">
-                        <h3>Project Title</h3>
-                        <p>Brief description of the project and client.</p>
-                    </div>
+                <div class="video-info">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project and client.</p>
                 </div>
-
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/XGLihCr7Vt4"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project and client.</p>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/T0Vyf8dXSfM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Project Title</h3>
+                    <p>Brief description of the project and client.</p>
+                </div>
             </div>
         </div>
 
@@ -558,7 +567,7 @@
         <div class="contact-wrapper">
             <div class="contact-intro">
                 <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
-                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
+                <a href="/cdn-cgi/l/email-protection#82ebece4edc2e4ebe5f7f0e7b7efe7e6ebe3ace1edef" class="contact-email"><span class="__cf_email__" data-cfemail="f69f989099b6909f91838493c39b93929f97d895999b">[email&#160;protected]</span></a>
             </div>
 
             <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
@@ -576,16 +585,15 @@
         </div>
         
         <!-- Email link - desktop only -->
-        <a href="mailto:info@figure5media.com" class="section-arrow desktop-only-arrow"
-            style="font-size: 1rem; text-decoration: none; color: var(--accent); bottom: 3rem;">
-            info@figure5media.com
+        <a href="/cdn-cgi/l/email-protection#c5acaba3aa85a3aca2b0b7a0f0a8a0a1aca4eba6aaa8" class="section-arrow desktop-only-arrow" style="font-size: 1rem; text-decoration: none; color: var(--accent); bottom: 3rem;">
+            <span class="__cf_email__" data-cfemail="c5acaba3aa85a3aca2b0b7a0f0a8a0a1aca4eba6aaa8">[email&#160;protected]</span>
         </a>
         
         <p class="desktop-only-copyright" style="color: var(--text-secondary); font-size: 0.85rem; position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%); margin: 0;">© 2026 Figure 5 Media. All rights reserved.</p>
         <p class="mobile-only-copyright" style="color: var(--text-secondary); font-size: 0.85rem; text-align: center; margin-top: auto; padding: 3rem 0 2rem 0; display: none;">© 2026 Figure 5 Media. All rights reserved.</p>
     </section>
 
-    <script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
         // Hamburger menu
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
@@ -619,32 +627,48 @@
             });
         });
 
-        // Portfolio password
-        function checkPortfolioPassword() {
+        // ── Portfolio password ────────────────────────────────────────────────
+        // Set to true to require a password, false to show videos openly.
+        const PASSWORD_PROTECTED = false;
+
+        // SHA-256 hash of the password — the actual password never appears in source.
+        // To change the password: run this in your browser console:
+        //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('NEWPASSWORD'))
+        //     .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
+        // Then replace CORRECT_HASH below with the output.
+        const CORRECT_HASH = '47cfbaf07f6ec02cb123f3eb689096c5681b393317b3879b8ab05656b73a2eac';
+
+        // On page load, show or hide based on PASSWORD_PROTECTED flag
+        if (PASSWORD_PROTECTED) {
+            document.getElementById('portfolio-content').style.display = 'none';
+        } else {
+            document.getElementById('password-section').style.display = 'none';
+            const content = document.getElementById('portfolio-content');
+            content.style.display = 'grid';
+            requestAnimationFrame(() => content.classList.add('visible'));
+        }
+
+        async function checkPortfolioPassword() {
             const input = document.getElementById('portfolio-password').value;
             const error = document.getElementById('password-error');
-            const content = document.getElementById('portfolio-content');
-            const gate = document.getElementById('password-section');
 
-            if (input === 'F5SAMPLES26') {
-                gate.style.display = 'none';
-                content.style.display = 'block';
-                error.style.display = 'none';
+            const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+            const hashHex = [...new Uint8Array(hashBuffer)].map(b => b.toString(16).padStart(2, '0')).join('');
+
+            if (hashHex === CORRECT_HASH) {
+                const gate = document.getElementById('password-section');
+                const content = document.getElementById('portfolio-content');
+
+                // Fade out gate
+                gate.style.opacity = '0';
+                setTimeout(() => {
+                    gate.style.display = 'none';
+                    content.style.display = 'grid';
+                    // Trigger fade-in animation
+                    requestAnimationFrame(() => content.classList.add('visible'));
+                }, 400);
             } else {
                 error.style.display = 'block';
                 document.getElementById('portfolio-password').value = '';
             }
         }
-
-        // Contact form
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function() {
-                setTimeout(() => {
-                    document.getElementById('form-success').style.display = 'block';
-                }, 500);
-            });
-        }
-    </script>
-</body>
-</html>
