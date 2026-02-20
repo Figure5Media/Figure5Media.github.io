@@ -167,7 +167,7 @@
         }
         h2 {
             font-size: clamp(1.6rem, 4vw, 2.4rem);
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             font-weight: 300;
             letter-spacing: -1.5px;
             color: var(--accent);
@@ -195,7 +195,7 @@
         }
 
         /* About */
-        .work-intro { max-width: 800px; margin-bottom: 0.75rem; }
+        .work-intro { max-width: 1100px; margin-bottom: 0.5rem; }
         .work-intro p {
             font-size: 0.95rem;
             color: var(--text-secondary);
@@ -203,12 +203,12 @@
             font-weight: 300;
             letter-spacing: 0.01em;
         }
-        .work-intro p + p { margin-top: 0.75rem; }
+        .work-intro p + p { margin-top: 0.5rem; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 0;
-            margin-top: 0.75rem;
+            margin-top: 0.5rem;
         }
         .service-card {
             padding: 0.9rem 1rem 0.9rem 0;
@@ -372,8 +372,7 @@
             button[type="submit"] { padding: 0.8rem 2rem; font-size: 0.9rem; }
 
             /* Mobile nav */
-            #nav-menu {
-                display: flex;
+            nav ul {
                 position: fixed;
                 top: 0;
                 right: -100%;
@@ -387,8 +386,9 @@
                 transition: right 0.3s;
                 z-index: 999;
                 border-left: 1px solid rgba(255,255,255,0.1);
+                display: flex;
             }
-            #nav-menu.active { right: 0; }
+            nav ul.active { right: 0; }
             .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
             .hamburger span { width: 25px; height: 2px; background: var(--text-primary); transition: all 0.3s; }
             .hamburger:hover span { background: var(--accent); }
@@ -489,7 +489,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <p style="color: var(--text-secondary); font-size: 0.9rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem;">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem;">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
 
         <!-- Password Gate -->
         <div id="password-section" class="portfolio-gate" style="display:none;">
@@ -611,6 +611,11 @@
             navMenu.classList.toggle('active');
         }
 
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+
         hamburger.addEventListener('click', toggleMenu);
         hamburger.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
@@ -620,10 +625,13 @@
         });
 
         document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
         });
 
         // Smooth scroll
