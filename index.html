@@ -34,7 +34,7 @@
             top: -40px;
             left: 0;
             background: var(--accent);
-            color: #000000;
+            color: var(--bg-dark);
             padding: 0.5rem 1rem;
             text-decoration: none;
             z-index: 10000;
@@ -232,11 +232,23 @@
         }
         .portfolio-gate p {
             color: var(--text-secondary);
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 1.5rem;
             font-weight: 300;
         }
+        .gate-button {
+            padding: 1.2rem 3rem;
+            background: var(--accent);
+            color: var(--bg-dark);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+        .gate-button:hover { background: var(--accent-hover); }
         .video-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 380px));
@@ -272,6 +284,7 @@
             aspect-ratio: 16 / 9;
             background: #000;
         }
+        .portfolio-intro { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem; }
         .video-info { padding: 0.5rem 0.75rem; }
         .video-info h3 { font-size: 0.95rem; font-weight: 400; letter-spacing: -0.2px; }
 
@@ -296,7 +309,7 @@
             background: var(--bg-medium);
             border: 1px solid rgba(255, 255, 255, 0.1);
             color: var(--text-primary);
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-family: inherit;
             transition: all 0.2s;
             font-weight: 300;
@@ -307,16 +320,17 @@
         button[type="submit"] {
             padding: 0.75rem 2.5rem;
             background: var(--accent);
-            color: #000;
+            color: var(--bg-dark);
             border: none;
             font-weight: 500;
             cursor: pointer;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             transition: all 0.2s;
             letter-spacing: 0.5px;
             align-self: flex-start;
         }
-        #portfolio { padding-top: 5rem; padding-bottom: 3rem; }
+        .contact-bottom { text-align: center; padding-top: 1.5rem; }
+        .contact-bottom p { color: var(--text-secondary); font-size: 0.85rem; }
         #portfolio h2 { margin-bottom: 0.5rem; }
         button[type="submit"]:hover { background: var(--accent-hover); transform: translateY(-2px); }
         #contact { padding-top: 5rem; }
@@ -337,7 +351,7 @@
             }
             .hero-video-bg {
                 position: absolute !important;
-                background-color: #DA972B;
+                background-color: var(--accent);
                 background-size: cover;
                 background-position: center;
                 transform: translate3d(0,0,0);
@@ -350,12 +364,12 @@
             #contact { padding-top: 5rem; padding-bottom: 1.5rem; min-height: 100vh; }
             #contact h2 { margin-bottom: 0.3rem; }
             #contact .contact-intro { margin-bottom: 0.5rem; }
-            #contact .contact-intro p { margin-bottom: 0.3rem; font-size: 0.8rem; }
+            #contact .contact-intro p { margin-bottom: 0.3rem; font-size: 0.85rem; }
             #contact .contact-email { margin: 0.3rem 0; font-size: 0.9rem; }
             #contact form { gap: 0.4rem; margin-top: 0.5rem; }
-            #contact input, #contact textarea { padding: 0.6rem 0.8rem; font-size: 0.8rem; }
+            #contact input, #contact textarea { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
             #contact textarea { min-height: 55px; }
-            #contact button[type="submit"] { padding: 0.6rem 1.5rem; font-size: 0.8rem; }
+            #contact button[type="submit"] { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
             h2 { font-size: 2rem; margin-bottom: 1rem; }
             .work-intro p { font-size: 0.9rem; line-height: 1.5; }
             .work-intro { margin-bottom: 1rem; }
@@ -454,7 +468,7 @@
         
         <div class="work-intro">
             <p>Figure 5 Media is a Los Angeles-based post-production studio with ten years of experience partnering with startups, established brands, and Fortune 500 Companies—specializing in short-form content for brands that demand excellence.</p>
-            <p style="margin-top: 1.5rem;">Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
+            <p>Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
         </div>
 
         <div class="services-grid">
@@ -489,7 +503,7 @@
     <!-- Portfolio Section -->
     <section id="portfolio">
         <h2>Portfolio</h2>
-        <p style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem;">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
+        <p class="portfolio-intro">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
 
         <!-- Password Gate -->
         <div id="password-section" class="portfolio-gate" style="display:none;">
@@ -498,10 +512,7 @@
                 style="width: 100%; max-width: 360px; padding: 1.2rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;"
                 onkeydown="if(event.key==='Enter') checkPortfolioPassword()">
             <br>
-            <button onclick="checkPortfolioPassword()"
-                style="padding: 1.2rem 3rem; background: var(--accent); color: #000; border: none; font-weight: 500; cursor: pointer; font-size: 1rem; transition: all 0.2s; margin-top: 1rem;"
-                onmouseover="this.style.background='var(--accent-hover)'"
-                onmouseout="this.style.background='#DA972B'">View Portfolio</button>
+            <button onclick="checkPortfolioPassword()" class="gate-button">View Portfolio</button>
             <p id="password-error" style="color: var(--accent); font-size: 0.9rem; margin-top: 1rem; display: none;">Incorrect password. Please try again.</p>
         </div>
 
@@ -595,9 +606,9 @@
         </div>
         
         <!-- Bottom of contact: email in arrow position + copyright -->
-        <div style="text-align: center; padding-top: 1.5rem;">
+        <div class="contact-bottom">
             <a href="mailto:info@figure5media.com" class="section-arrow desktop-only-arrow" style="font-size: 0.95rem; letter-spacing: -0.3px; font-weight: 300; margin-bottom: 0.75rem;">info@figure5media.com</a>
-            <p style="color: var(--text-secondary); font-size: 0.85rem;">© 2026 Figure 5 Media. All rights reserved.</p>
+            <p>© 2026 Figure 5 Media. All rights reserved.</p>
         </div>
     </section>
 
