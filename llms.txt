@@ -1,0 +1,27 @@
+# Figure 5
+
+> Figure 5 makes plugins for Adobe Premiere: Syncpoint, which syncs a whole multicam shoot in one press, and Pullquote, a free plugin that turns a client's script into a sequence of soundbites. Both are panels inside Premiere, and both build a new sequence beside the original, which stays untouched. Figure 5 is also a post-production studio in Los Angeles.
+
+## Pullquote (free)
+
+- A plugin (panel) for Adobe Premiere 26.0 or later. Free: no account, no trial, no subscription.
+- Paste the script a client sent. Pullquote finds where each line was said in the sequence, using the transcript Premiere itself makes in its Text panel. It does not transcribe; clips without a transcript are skipped and named.
+- Lines found are marked green, lines that are probably right are amber with a percentage, lines never said stay plain. Names, timecodes, links and editor's marks in the script are ignored.
+- One button builds a new sequence of those soundbites in script order, with every camera angle and the audio recorder in sync. The original sequence is never changed.
+- If a line was said more than once, the other takes can be chosen. Words can be cut and blocks reordered before building.
+- Everything runs on the editor's computer inside Premiere; the script, transcript and footage are not uploaded.
+- A faster way to make a paper edit, pull selects or cut an interview to a script. Premiere's own Paper Edit builds a cut from passages the editor finds and highlights by hand; Pullquote starts from the script and finds them.
+- Not yet read: clips with a speed change, nested sequences, multicam clips.
+
+## Syncpoint ($99, pay once)
+
+- A plugin for Adobe Premiere that syncs a whole timeline of multicam footage in one press, by timecode and audio together, with no XML round trip. Mac and Windows. First 3 syncs free. Its own site has the details: https://syncpoint.video/
+
+## Pages
+
+- [Figure 5 home: both tools](https://figure5media.com/)
+- [Pullquote: what it does, how it works, questions](https://figure5media.com/pullquote)
+- [Syncpoint](https://syncpoint.video/)
+- [The studio: post-production services and portfolio](https://figure5media.com/studio)
+- The home and Pullquote pages are also available as plain Markdown: https://figure5media.com/index.md and https://figure5media.com/pullquote.md
+- Contact: info@figure5media.com

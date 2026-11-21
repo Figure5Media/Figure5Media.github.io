@@ -10,7 +10,29 @@
 <meta property="og:url" content="https://figure5media.com/">
 <meta property="og:title" content="Figure 5 · Premiere tools to make life easier">
 <meta property="og:description" content="Sync a whole shoot in one click. Turn a client's script into a cut.">
-<meta property="og:image" content="https://figure5media.com/apple-touch-icon.png">
+<meta property="og:site_name" content="Figure 5">
+<meta property="og:image" content="https://figure5media.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Figure 5: Premiere tools to make life easier. Syncpoint and Pullquote.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="https://figure5media.com/index.md">
+<!-- What search engines and AI assistants read about the maker and its tools, in their own terms. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    { "@type": "Organization", "@id": "https://figure5media.com/#org", "name": "Figure 5", "legalName": "Figure 5 LLC", "url": "https://figure5media.com/",
+      "description": "Figure 5 makes plugins for Adobe Premiere (Syncpoint and Pullquote) and is a post-production studio in Los Angeles.", "email": "info@figure5media.com" },
+    { "@type": "SoftwareApplication", "name": "Syncpoint", "url": "https://syncpoint.video/", "applicationCategory": "MultimediaApplication", "applicationSubCategory": "Video editing plugin",
+      "description": "A plugin for Adobe Premiere that syncs a whole timeline of multicam footage in one press, by timecode and audio together.",
+      "operatingSystem": "macOS, Windows", "offers": { "@type": "Offer", "price": "99", "priceCurrency": "USD" }, "publisher": { "@id": "https://figure5media.com/#org" } },
+    { "@type": "SoftwareApplication", "name": "Pullquote", "url": "https://figure5media.com/pullquote", "applicationCategory": "MultimediaApplication", "applicationSubCategory": "Video editing plugin",
+      "description": "A free plugin for Adobe Premiere that matches a pasted script to the sequence's transcript and builds the soundbites into a new sequence in script order.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }, "publisher": { "@id": "https://figure5media.com/#org" } }
+  ]
+}
+</script>
 <meta name="theme-color" content="#09090a">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -28,7 +50,6 @@
     <nav class="links" aria-label="Main">
       <a href="https://syncpoint.video/">Syncpoint</a>
       <a href="pullquote.html">Pullquote</a>
-      <a class="opt" href="#studio">Studio</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -156,7 +177,7 @@
       <div class="shot">
     <div class="demo mini flip" id="pqMini" data-stage="empty" aria-hidden="true">
       <div class="pn card-panel">
-        <div class="ptabs"><span>Effect Controls</span><span class="on">Pullquote <i class="hb">≡</i></span></div>
+        <div class="ptabs"><span>Effect Controls</span><span>Text</span><span class="on">Pullquote <i class="hb">≡</i></span></div>
         <div class="pq-body">
           <div class="pq-brand"><svg width="15" height="15" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg><span class="pq-name">Interview_synced</span><span class="pq-edit">Edit Script</span></div>
           <div class="pq-meter"><i></i></div>
@@ -244,7 +265,6 @@
     <div class="wrap">
       <div class="head center reveal">
         <h2>From card dump to rough cut</h2>
-        <p>The two tools pick up where the other leaves off.</p>
       </div>
       <ol class="flow reveal">
         <li><span class="n">1</span><b>Drop the shoot in a timeline</b><span>Cameras, recorders, whatever came off the cards, in any order.</span></li>
@@ -254,29 +274,11 @@
     </div>
   </section>
 
-  <section id="studio" class="band">
-    <div class="wrap split reveal">
-      <h2>The studio</h2>
-      <div class="stack">
-        <p class="lede">Figure 5 is also a post-production studio, with ten years of cutting short-form work for startups, established brands and Fortune 500 companies.</p>
-        <ul class="chips">
-          <li>Commercials &amp; trailers</li>
-          <li>Event coverage</li>
-          <li>Corporate communications</li>
-          <li>Social content</li>
-          <li>On-site editing</li>
-          <li>AI video production</li>
-        </ul>
-        <p class="fine">Most of the work is under confidentiality agreements. Samples are shared on request.</p>
-      </div>
-    </div>
-  </section>
-
   <section id="contact" class="band">
     <div class="wrap split reveal">
       <div class="stack">
         <h2>Contact</h2>
-        <p>For a project, a plugin question, or anything else.</p>
+        <p>For a plugin question, or anything else.</p>
         <a class="email" href="mailto:info@figure5media.com">info@figure5media.com</a>
       </div>
       <form id="contactForm">

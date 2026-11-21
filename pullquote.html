@@ -6,14 +6,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Pullquote · Paste the script, get the cut</title>
-<meta name="description" content="Pullquote is a free plugin for Adobe Premiere. Paste a script and it finds each line in your transcript, then builds a sequence of those soundbites in script order.">
+<title>Pullquote · Turn a script into a soundbite sequence in Premiere · Free plugin</title>
+<meta name="description" content="Pullquote is a free plugin for Adobe Premiere. Paste the client's script and it finds every line in Premiere's transcript, then builds the soundbites into a new sequence in script order, with every camera in sync.">
 <link rel="canonical" href="https://figure5media.com/pullquote">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://figure5media.com/pullquote">
 <meta property="og:title" content="Pullquote · Paste the script, get the cut">
 <meta property="og:description" content="A free Premiere plugin that matches a client script to your transcript and builds the soundbite sequence.">
-<meta property="og:site_name" content="Pullquote">
+<meta property="og:site_name" content="Figure 5">
+<meta property="og:image" content="https://figure5media.com/og-pullquote.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Pullquote logo and name: paste the script, get the cut. A free plugin for Adobe Premiere.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="text/markdown" href="https://figure5media.com/pullquote.md">
+<!-- What search engines and AI assistants read about the product, in their own terms. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pullquote",
+  "url": "https://figure5media.com/pullquote",
+  "description": "A free plugin (panel) for Adobe Premiere that matches a pasted script to the transcript Premiere makes of a sequence, finds where each scripted line was said, and builds a new sequence of those soundbites in script order with every camera angle and the audio recorder in sync. A faster way to make a paper edit or pull selects from an interview.",
+  "applicationCategory": "MultimediaApplication",
+  "applicationSubCategory": "Video editing plugin",
+  "softwareRequirements": "Adobe Premiere 26.0 or later, with transcripts made in Premiere's Text panel",
+  "image": "https://figure5media.com/og-pullquote.png",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to use; no account, no subscription" },
+  "publisher": { "@type": "Organization", "name": "Figure 5 LLC", "url": "https://figure5media.com/" }
+}
+</script>
+<!-- The questions below, word for word (made from the page's own FAQ by assemble.py). -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does Pullquote change my sequence or my media?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It reads the sequence in front of you and builds a new one beside it, named with \"Script 1\" at the end. Your original timeline and every media file stay exactly as they were."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Doesn't Premiere's Paper Edit do this?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Paper Edit builds a cut from passages you find and highlight in the transcript yourself. Pullquote starts from the script instead: it finds each line for you, shows the other takes when a line was said more than once, and builds the whole sequence in one press."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it transcribe my footage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. It reads the transcripts Premiere makes in its Text panel. Clips without a transcript are skipped and named, so you know which ones to transcribe."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is my script or footage sent anywhere?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Everything runs on your computer. Nothing is uploaded, and there is no account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if a line in the script was never said?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It stays plain in the panel, outside the green and amber blocks, and is left out of the new sequence. The line under the sequence's name counts how many were found, how many to check, and how many weren't found."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if the speaker said a line more than once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pullquote picks one and shows the other takes under it. Click through them and choose the one you want before you build."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can't it do yet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Clips with a speed change, nested sequences and multicam clips aren't read yet. Your sequence's own markers don't carry into the new one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is it free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We built it for our own edits and it saved us hours, so we're sharing it. If it's useful to you, have a look at Syncpoint, which is how we pay for the time."
+      }
+    }
+  ]
+}
+</script>
 <meta name="theme-color" content="#09090a">
 <link rel="icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -26,12 +121,11 @@
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#main" aria-label="Pullquote home"><svg viewBox="53 55 320 320" aria-hidden="true"><path fill="#66EFC0" d="M104 103 H167 C189 103 205 120 205 142 V182 C205 202 193 216 175 216 H143 C130 216 121 226 121 239 C121 253 128 265 139 276 C147 284 139 295 128 292 C86 281 61 250 61 209 V147 C61 121 79 103 104 103 Z"/><path fill="#FFBF50" d="M259 137 H321 C347 137 365 155 365 181 V248 C365 281 345 310 311 323 C300 327 291 316 298 307 C309 293 305 278 302 269 C299 259 291 251 278 251 H260 C236 251 219 233 219 210 V178 C219 154 236 137 259 137 Z"/></svg><span>Pullquote</span></a>
+    <a class="mark" href="./" aria-label="Figure 5, home">FIGURE<sup>5</sup></a>
     <nav class="links" aria-label="Sections">
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="./">Figure 5</a>
     </nav>
     <a class="btn solid small" href="#pricing" data-dl>Download free</a>
   </div>
@@ -85,7 +179,7 @@
       </div>
 
       <div class="pn" aria-hidden="true">
-        <div class="ptabs"><span>Effect Controls</span><span class="on">Pullquote <i class="hb">≡</i></span></div>
+        <div class="ptabs"><span>Effect Controls</span><span>Text</span><span class="on">Pullquote <i class="hb">≡</i></span></div>
         <div class="pq-body">
           <div class="pq-brand"><svg width="15" height="15" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg><span class="pq-name">Interview_synced</span><span class="pq-edit">Edit Script</span></div>
           <div class="pq-meter"><i></i></div>
@@ -159,6 +253,7 @@
       </div>
     </div>
     <p class="lede demo-lede">Premiere already transcribes your interviews. <strong>Pullquote puts that transcript to work: paste the client's script and it finds every line, then builds the soundbites into a new sequence, in script order, with every camera and the recorder in sync.</strong> No hunting for selects by hand.</p>
+    <p class="fine" style="margin: 12px auto 0; text-align: center;">Pullquote reads the transcript Premiere makes in its Text panel. Transcribe the clips first; without a transcript there is nothing to find.</p>
   </div>
 
   <div class="wrap" id="how">

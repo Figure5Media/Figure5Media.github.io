@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure 5 Media | Post-Production Services | Los Angeles Video Editing</title>
+    <meta name="description" content="Figure 5 Media - Los Angeles post-production studio specializing in short-form content for Fortune 500 companies. Professional video editing, color grading, sound design, and motion graphics.">
+    <meta name="keywords" content="video editing, post-production, Los Angeles, color grading, sound design, motion graphics, commercial editing, video editor">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://figure5media.com/studio">
+    <link rel="canonical" href="https://figure5media.com/studio">
+    <meta property="og:title" content="Figure 5 Media | Post-Production Services">
+    <meta property="og:description" content="Los Angeles post-production studio specializing in short-form content for Fortune 500 companies, tech platforms, and entertainment clients.">
+    <meta property="og:image" content="https://figure5media.com/apple-touch-icon.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://figure5media.com/studio">
+    <meta property="twitter:title" content="Figure 5 Media | Post-Production Services">
+    <meta property="twitter:description" content="Los Angeles post-production studio specializing in short-form content for Fortune 500 companies, tech platforms, and entertainment clients.">
+    <meta property="twitter:image" content="https://figure5media.com/apple-touch-icon.png">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <meta name="theme-color" content="#DA972B">
+    <style>
+        .skip-to-content {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--bg-dark);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            z-index: 10000;
+            font-weight: 500;
+        }
+        .skip-to-content:focus { top: 0; }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-snap-type: y mandatory;
+            scroll-behavior: smooth;
+            scroll-padding-top: 0;
+            overflow-y: scroll;
+            height: 100%;
+            background-color: #0a0a0a;
+        }
+
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-medium: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #DA972B;
+            --accent-hover: #EFD4A3;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro Display', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            line-height: 1.65;
+            height: 100%;
+            overscroll-behavior-y: none;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1.5rem 4%;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        nav .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        nav .logo:hover { color: var(--text-primary); }
+        nav ul { list-style: none; display: flex; gap: 3rem; }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.2s;
+            font-size: 0.95rem;
+            letter-spacing: -0.2px;
+        }
+        nav ul a:hover { color: var(--accent); }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 4%;
+            position: relative;
+            overflow: hidden;
+            scroll-snap-align: start;
+        }
+        .hero-video-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            overflow: hidden;
+            background-image: url('/background-placeholder.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-video-bg::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(10, 10, 10, 0.7);
+        }
+        .hero-video-bg img { width: 100%; height: 100%; object-fit: cover; }
+        .hero-video-bg video {
+            position: absolute;
+            top: 50%; left: 50%;
+            min-width: 100%; min-height: 100%;
+            width: auto; height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+        .hero-content { max-width: 900px; position: relative; z-index: 1; }
+
+        /* Sections */
+        section {
+            padding: 5rem 4% 4rem 4%;
+            max-width: 1400px;
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            scroll-snap-align: start;
+            overflow-y: auto;
+            position: relative;
+        }
+        h2 {
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            margin-bottom: 0.5rem;
+            font-weight: 300;
+            letter-spacing: -1.5px;
+            color: var(--accent);
+        }
+
+        /* Scroll arrows */
+        .section-arrow {
+            display: block;
+            text-align: center;
+            padding-top: 1.5rem;
+            color: var(--text-secondary);
+            font-size: 2rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .section-arrow:hover { color: var(--accent); }
+        .hero-arrow {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+        /* About */
+        .work-intro { max-width: 1100px; margin-bottom: 0.5rem; }
+        .work-intro p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+        .work-intro p + p { margin-top: 0.5rem; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 0.5rem;
+        }
+        .service-card {
+            padding: 0.9rem 1rem 0.9rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s;
+        }
+        .service-card:hover { border-top-color: var(--accent); transform: translateY(-3px); }
+        .service-card:hover h3 { color: var(--accent); }
+        .service-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; font-weight: 500; letter-spacing: 0.02em; }
+        .service-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; font-weight: 300; }
+
+        /* Portfolio */
+        .portfolio-gate {
+            max-width: 500px;
+            margin: 2rem auto;
+            text-align: center;
+            padding: 2.5rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--bg-medium);
+            transition: opacity 0.4s ease;
+        }
+        .portfolio-gate p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-weight: 300;
+        }
+        .gate-button {
+            padding: 1.2rem 3rem;
+            background: var(--accent);
+            color: var(--bg-dark);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            margin-top: 1rem;
+        }
+        .gate-button:hover { background: var(--accent-hover); }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+            opacity: 0;
+            animation: none;
+            flex: 1;
+            justify-content: center;
+        }
+        .video-grid.visible {
+            animation: fadeIn 0.7s ease forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .video-item {
+            background: var(--bg-medium);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: border-color 0.3s;
+        }
+        .video-item:hover { border-color: rgba(218, 151, 43, 0.4); }
+        .video-wrapper {
+            position: relative;
+            width: 100%;
+            background: #000;
+            line-height: 0;
+        }
+        .video-wrapper video {
+            width: 100%;
+            display: block;
+            aspect-ratio: 16 / 9;
+            background: #000;
+        }
+        .portfolio-intro { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem; }
+        .video-info { padding: 0.5rem 0.75rem; }
+        .video-info h3 { font-size: 0.95rem; font-weight: 400; letter-spacing: -0.2px; }
+
+        /* Contact */
+        .contact-wrapper { max-width: 600px; margin: 0 auto; }
+        .contact-intro { margin-bottom: 1rem; }
+        .contact-intro p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; }
+        .contact-email {
+            font-size: 0.95rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 300;
+            letter-spacing: -0.3px;
+            display: inline-block;
+            margin: 0.5rem 0 0 0;
+            transition: color 0.2s;
+        }
+        .contact-email:hover { color: var(--accent-hover); }
+        form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; max-width: 600px; }
+        input, textarea {
+            padding: 0.75rem 1rem;
+            background: var(--bg-medium);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            font-weight: 300;
+        }
+        input:focus, textarea:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,0.02); }
+        input::placeholder, textarea::placeholder { color: var(--text-secondary); }
+        textarea { min-height: 70px; resize: vertical; }
+        button[type="submit"] {
+            padding: 0.75rem 2.5rem;
+            background: var(--accent);
+            color: var(--bg-dark);
+            border: none;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            letter-spacing: 0.5px;
+            align-self: flex-start;
+        }
+        .contact-bottom { text-align: center; padding-top: 1.5rem; }
+        .contact-bottom p { color: var(--text-secondary); font-size: 0.85rem; }
+        #portfolio h2 { margin-bottom: 0.5rem; }
+        button[type="submit"]:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        #contact { padding-top: 5rem; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-arrow { display: none; }
+            .desktop-only-arrow { display: none; }
+            .desktop-only-copyright { display: none; }
+            .mobile-only-copyright { display: block !important; }
+
+            .hero {
+                min-height: 50vh;
+                height: 50vh;
+                padding-top: 5rem;
+                contain: layout style paint;
+                isolation: isolate;
+            }
+            .hero-video-bg {
+                position: absolute !important;
+                background-color: var(--accent);
+                background-size: cover;
+                background-position: center;
+                transform: translate3d(0,0,0);
+                -webkit-transform: translate3d(0,0,0);
+                backface-visibility: hidden;
+            }
+            nav ul { gap: 1.5rem; }
+            nav a { font-size: 0.85rem; }
+            section { padding: 5rem 5% 2rem 5%; min-height: 100vh; }
+            #contact { padding-top: 5rem; padding-bottom: 1.5rem; min-height: 100vh; }
+            #contact h2 { margin-bottom: 0.3rem; }
+            #contact .contact-intro { margin-bottom: 0.5rem; }
+            #contact .contact-intro p { margin-bottom: 0.3rem; font-size: 0.85rem; }
+            #contact .contact-email { margin: 0.3rem 0; font-size: 0.9rem; }
+            #contact form { gap: 0.4rem; margin-top: 0.5rem; }
+            #contact input, #contact textarea { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
+            #contact textarea { min-height: 55px; }
+            #contact button[type="submit"] { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
+            h2 { font-size: 2rem; margin-bottom: 1rem; }
+            .work-intro p { font-size: 0.9rem; line-height: 1.5; }
+            .work-intro { margin-bottom: 1rem; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1rem; }
+            .service-card { padding: 0.8rem 0; }
+            .service-card h3 { font-size: 0.85rem; margin-bottom: 0.2rem; }
+            .service-card p { font-size: 0.75rem; line-height: 1.3; }
+            .video-grid { grid-template-columns: 1fr; }
+            .contact-intro p { font-size: 0.9rem; }
+            .contact-email { font-size: 1.2rem; }
+            form { gap: 0.8rem; }
+            input, textarea { padding: 0.8rem; font-size: 0.9rem; }
+            textarea { min-height: 70px; }
+            button[type="submit"] { padding: 0.8rem 2rem; font-size: 0.9rem; }
+
+            /* Mobile nav */
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 250px;
+                background: var(--bg-dark);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                transition: right 0.3s;
+                z-index: 999;
+                border-left: 1px solid rgba(255,255,255,0.1);
+                display: flex;
+            }
+            nav ul.active { right: 0; }
+            .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
+            .hamburger span { width: 25px; height: 2px; background: var(--text-primary); transition: all 0.3s; }
+            .hamburger:hover span { background: var(--accent); }
+            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+        }
+
+        @media (min-width: 769px) {
+            .hamburger { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="container">
+            <a href="#home" class="logo">
+                <span style="color: var(--accent);">Figure 5</span>
+                <span style="height: 1.2em; width: 1px; background: var(--text-secondary); display: inline-block;"></span>
+                <span>Post-Production</span>
+            </a>
+            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul id="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./">Premiere tools</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <main id="main-content">
+            <div class="hero-video-bg">
+                <img src="/background-placeholder.jpg" alt="Figure 5 Media background" style="width: 100%; height: 100%; object-fit: cover;">
+                <!--
+                TO ADD YOUR VIDEO:
+                1. Save your video file as 'background.mp4'
+                2. Upload it to the same folder as this HTML file
+                3. Replace the img tag above with:
+                <video autoplay muted loop playsinline>
+                    <source src="background.mp4" type="video/mp4">
+                </video>
+                -->
+            </div>
+            <div class="hero-content">
+                <!-- Text will be in the video itself -->
+            </div>
+        </main>
+        <a href="#about" class="section-arrow hero-arrow">↓</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        
+        <div class="work-intro">
+            <p>Figure 5 Media is a Los Angeles-based post-production studio with ten years of experience partnering with startups, established brands, and Fortune 500 Companies—specializing in short-form content for brands that demand excellence.</p>
+            <p>Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Commercials &amp; Trailers</h3>
+                <p>Polished, high-impact spots designed to elevate brands and drive sales.</p>
+            </div>
+            <div class="service-card">
+                <h3>Event Coverage</h3>
+                <p>Dynamic recaps and sizzle reels from conferences and product launches.</p>
+            </div>
+            <div class="service-card">
+                <h3>Corporate Communications</h3>
+                <p>Executive messaging, training videos, and internal company content.</p>
+            </div>
+            <div class="service-card">
+                <h3>Social Content &amp; Vlogs</h3>
+                <p>Fast-paced, engaging storytelling that drives views, shares, and conversions.</p>
+            </div>
+            <div class="service-card">
+                <h3>On-Site Editing</h3>
+                <p>Available to travel for on-location editing and same-day delivery for time-sensitive projects.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Video Production</h3>
+                <p>Custom AI video generation with complex prompting for unique visuals and rapid delivery.</p>
+            </div>
+        </div>
+        <a href="#portfolio" class="section-arrow">↓</a>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p class="portfolio-intro">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
+
+        <!-- Password Gate -->
+        <div id="password-section" class="portfolio-gate" style="display:none;">
+            <p>Portfolio samples are password protected due to client confidentiality.</p>
+            <input type="password" id="portfolio-password" placeholder="Enter password"
+                style="width: 100%; max-width: 360px; padding: 1.2rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;"
+                onkeydown="if(event.key==='Enter') checkPortfolioPassword()">
+            <br>
+            <button onclick="checkPortfolioPassword()" class="gate-button">View Portfolio</button>
+            <p id="password-error" style="color: var(--accent); font-size: 0.9rem; margin-top: 1rem; display: none;">Incorrect password. Please try again.</p>
+        </div>
+
+        <!-- Portfolio Content — hidden until correct password entered -->
+        <!-- VIDEO URLS: Replace each src with your GitHub Release URL:
+             https://github.com/YOUR-USERNAME/YOUR-REPO/releases/download/v1.0/your-video.mp4 -->
+        <div id="portfolio-content" class="video-grid visible">
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/6eJ3z_a2NyM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Google Earth Engine</h3>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/FQ8WRW521vM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Discord | GDC 2025</h3>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/XGLihCr7Vt4"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Vivian Health</h3>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/T0Vyf8dXSfM"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>2025 Ascend Leadership Summit</h3>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/BuDzWPIQxMg"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>DotCal Commercial</h3>
+                </div>
+            </div>
+            <div class="video-item">
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/5Hd-er8vZkQ"
+                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Roblox | HackWeek 2025</h3>
+                </div>
+            </div>
+        </div>
+
+        <a href="#contact" class="section-arrow">↓</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        
+        <div class="contact-wrapper">
+            <div class="contact-intro">
+                <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
+                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
+            </div>
+
+            <form id="contactForm" name="contact">
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                </p>
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="text" name="company" placeholder="Company">
+                <textarea name="message" placeholder="Project details" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="form-success" style="color: var(--accent); margin-top: 1rem; display: none;">Thanks! We'll get back to you soon.</p>
+        </div>
+        
+        <!-- Bottom of contact: email in arrow position + copyright -->
+        <div class="contact-bottom">
+            <a href="mailto:info@figure5media.com" class="section-arrow desktop-only-arrow" style="font-size: 0.95rem; letter-spacing: -0.3px; font-weight: 300; margin-bottom: 0.75rem;">info@figure5media.com</a>
+            <p>© 2026 Figure 5 Media. All rights reserved.</p>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', closeMenu);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
+                closeMenu();
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // ── Portfolio password ────────────────────────────────────────────────
+        // Set to true to require a password, false to show videos openly.
+        const PASSWORD_PROTECTED = false;
+
+        // SHA-256 hash of the password — the actual password never appears in source.
+        // To change the password: run this in your browser console:
+        //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('NEWPASSWORD'))
+        //     .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
+        // Then replace CORRECT_HASH below with the output.
+        const CORRECT_HASH = '47cfbaf07f6ec02cb123f3eb689096c5681b393317b3879b8ab05656b73a2eac';
+
+        // On page load, show or hide based on PASSWORD_PROTECTED flag
+        if (PASSWORD_PROTECTED) {
+            document.getElementById('portfolio-content').style.display = 'none';
+        } else {
+            document.getElementById('password-section').style.display = 'none';
+            const content = document.getElementById('portfolio-content');
+            content.style.display = 'grid';
+            requestAnimationFrame(() => content.classList.add('visible'));
+        }
+
+        async function checkPortfolioPassword() {
+            const input = document.getElementById('portfolio-password').value;
+            const error = document.getElementById('password-error');
+
+            const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
+            const hashHex = [...new Uint8Array(hashBuffer)].map(b => b.toString(16).padStart(2, '0')).join('');
+
+            if (hashHex === CORRECT_HASH) {
+                const gate = document.getElementById('password-section');
+                const content = document.getElementById('portfolio-content');
+
+                // Fade out gate
+                gate.style.opacity = '0';
+                setTimeout(() => {
+                    gate.style.display = 'none';
+                    content.style.display = 'grid';
+                    requestAnimationFrame(() => content.classList.add('visible'));
+                }, 400);
+            } else {
+                error.style.display = 'block';
+            }
+        }
+
+        // Contact: Send opens the visitor's own email with the message written and addressed.
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const v = (n) => (contactForm.elements[n] ? contactForm.elements[n].value.trim() : '');
+            const lines = [v('message'), '', v('name'), v('company'), v('email')].filter((x, i) => x || i === 1);
+            location.href = 'mailto:info@figure5media.com?subject=' + encodeURIComponent('Project inquiry from ' + v('name')) + '&body=' + encodeURIComponent(lines.join('\n'));
+        });
+    </script>
+</body>
+</html>
