@@ -131,7 +131,6 @@
             top: 0; left: 0;
             width: 100%; height: 100%;
             overflow: hidden;
-            background-image: url('/background-placeholder.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -418,12 +417,12 @@
     </style>
 </head>
 <body>
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    <a href="#portfolio" class="skip-to-content">Skip to main content</a>
     
     <!-- Navigation -->
     <nav aria-label="Main navigation">
         <div class="container">
-            <a href="#home" class="logo">
+            <a href="#portfolio" class="logo">
                 <span style="color: var(--accent);">Figure 5</span>
                 <span style="height: 1.2em; width: 1px; background: var(--text-secondary); display: inline-block;"></span>
                 <span>Post-Production</span>
@@ -434,73 +433,13 @@
                 <span></span>
             </div>
             <ul id="nav-menu">
-                <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="./">Premiere tools</a></li>
             </ul>
         </div>
     </nav>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <main id="main-content">
-            <div class="hero-video-bg">
-                <img src="/background-placeholder.jpg" alt="Figure 5 Media background" style="width: 100%; height: 100%; object-fit: cover;">
-                <!--
-                TO ADD YOUR VIDEO:
-                1. Save your video file as 'background.mp4'
-                2. Upload it to the same folder as this HTML file
-                3. Replace the img tag above with:
-                <video autoplay muted loop playsinline>
-                    <source src="background.mp4" type="video/mp4">
-                </video>
-                -->
-            </div>
-            <div class="hero-content">
-                <!-- Text will be in the video itself -->
-            </div>
-        </main>
-        <a href="#about" class="section-arrow hero-arrow">↓</a>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        
-        <div class="work-intro">
-            <p>Figure 5 Media is a Los Angeles-based post-production studio with ten years of experience partnering with startups, established brands, and Fortune 500 Companies—specializing in short-form content for brands that demand excellence.</p>
-            <p>Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
-        </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Commercials &amp; Trailers</h3>
-                <p>Polished, high-impact spots designed to elevate brands and drive sales.</p>
-            </div>
-            <div class="service-card">
-                <h3>Event Coverage</h3>
-                <p>Dynamic recaps and sizzle reels from conferences and product launches.</p>
-            </div>
-            <div class="service-card">
-                <h3>Corporate Communications</h3>
-                <p>Executive messaging, training videos, and internal company content.</p>
-            </div>
-            <div class="service-card">
-                <h3>Social Content &amp; Vlogs</h3>
-                <p>Fast-paced, engaging storytelling that drives views, shares, and conversions.</p>
-            </div>
-            <div class="service-card">
-                <h3>On-Site Editing</h3>
-                <p>Available to travel for on-location editing and same-day delivery for time-sensitive projects.</p>
-            </div>
-            <div class="service-card">
-                <h3>AI Video Production</h3>
-                <p>Custom AI video generation with complex prompting for unique visuals and rapid delivery.</p>
-            </div>
-        </div>
-        <a href="#portfolio" class="section-arrow">↓</a>
-    </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio">
@@ -608,6 +547,44 @@
             </div>
         </div>
 
+        <a href="#about" class="section-arrow">↓</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About</h2>
+        
+        <div class="work-intro">
+            <p>Figure 5 Media is a Los Angeles-based post-production studio with ten years of experience partnering with startups, established brands, and Fortune 500 Companies—specializing in short-form content for brands that demand excellence.</p>
+            <p>Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Commercials &amp; Trailers</h3>
+                <p>Polished, high-impact spots designed to elevate brands and drive sales.</p>
+            </div>
+            <div class="service-card">
+                <h3>Event Coverage</h3>
+                <p>Dynamic recaps and sizzle reels from conferences and product launches.</p>
+            </div>
+            <div class="service-card">
+                <h3>Corporate Communications</h3>
+                <p>Executive messaging, training videos, and internal company content.</p>
+            </div>
+            <div class="service-card">
+                <h3>Social Content &amp; Vlogs</h3>
+                <p>Fast-paced, engaging storytelling that drives views, shares, and conversions.</p>
+            </div>
+            <div class="service-card">
+                <h3>On-Site Editing</h3>
+                <p>Available to travel for on-location editing and same-day delivery for time-sensitive projects.</p>
+            </div>
+            <div class="service-card">
+                <h3>AI Video Production</h3>
+                <p>Custom AI video generation with complex prompting for unique visuals and rapid delivery.</p>
+            </div>
+        </div>
         <a href="#contact" class="section-arrow">↓</a>
     </section>
 
