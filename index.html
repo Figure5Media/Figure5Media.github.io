@@ -1,720 +1,317 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figure 5 Media | Post-Production Services | Los Angeles Video Editing</title>
-    <meta name="description" content="Figure 5 Media - Los Angeles post-production studio specializing in short-form content for Fortune 500 companies. Professional video editing, color grading, sound design, and motion graphics.">
-    <meta name="keywords" content="video editing, post-production, Los Angeles, color grading, sound design, motion graphics, commercial editing, video editor">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://figure5media.com/">
-    <meta property="og:title" content="Figure 5 Media | Post-Production Services">
-    <meta property="og:description" content="Los Angeles post-production studio specializing in short-form content for Fortune 500 companies, tech platforms, and entertainment clients.">
-    <meta property="og:image" content="https://figure5media.com/apple-touch-icon.png">
-    
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://figure5media.com/">
-    <meta property="twitter:title" content="Figure 5 Media | Post-Production Services">
-    <meta property="twitter:description" content="Los Angeles post-production studio specializing in short-form content for Fortune 500 companies, tech platforms, and entertainment clients.">
-    <meta property="twitter:image" content="https://figure5media.com/apple-touch-icon.png">
-    
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <meta name="theme-color" content="#DA972B">
-    <style>
-        .skip-to-content {
-            position: absolute;
-            top: -40px;
-            left: 0;
-            background: var(--accent);
-            color: var(--bg-dark);
-            padding: 0.5rem 1rem;
-            text-decoration: none;
-            z-index: 10000;
-            font-weight: 500;
-        }
-        .skip-to-content:focus { top: 0; }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        html {
-            scroll-snap-type: y mandatory;
-            scroll-behavior: smooth;
-            scroll-padding-top: 0;
-            overflow-y: scroll;
-            height: 100%;
-            background-color: #0a0a0a;
-        }
-
-        :root {
-            --bg-dark: #0a0a0a;
-            --bg-medium: #1a1a1a;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --accent: #DA972B;
-            --accent-hover: #EFD4A3;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'SF Pro Display', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.65;
-            height: 100%;
-            overscroll-behavior-y: none;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            padding: 1.5rem 4%;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        nav .container {
-            max-width: 1600px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        nav .logo {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        nav .logo:hover { color: var(--text-primary); }
-        nav ul { list-style: none; display: flex; gap: 3rem; }
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 400;
-            transition: color 0.2s;
-            font-size: 0.95rem;
-            letter-spacing: -0.2px;
-        }
-        nav ul a:hover { color: var(--accent); }
-
-        /* Hero */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 4%;
-            position: relative;
-            overflow: hidden;
-            scroll-snap-align: start;
-        }
-        .hero-video-bg {
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            overflow: hidden;
-            background-image: url('/background-placeholder.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-        .hero-video-bg::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(10, 10, 10, 0.7);
-        }
-        .hero-video-bg img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-video-bg video {
-            position: absolute;
-            top: 50%; left: 50%;
-            min-width: 100%; min-height: 100%;
-            width: auto; height: auto;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-        .hero-content { max-width: 900px; position: relative; z-index: 1; }
-
-        /* Sections */
-        section {
-            padding: 5rem 4% 4rem 4%;
-            max-width: 1400px;
-            margin: 0 auto;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            scroll-snap-align: start;
-            overflow-y: auto;
-            position: relative;
-        }
-        h2 {
-            font-size: clamp(1.6rem, 4vw, 2.4rem);
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-            letter-spacing: -1.5px;
-            color: var(--accent);
-        }
-
-        /* Scroll arrows */
-        .section-arrow {
-            display: block;
-            text-align: center;
-            padding-top: 1.5rem;
-            color: var(--text-secondary);
-            font-size: 2rem;
-            text-decoration: none;
-            cursor: pointer;
-            transition: color 0.2s;
-        }
-        .section-arrow:hover { color: var(--accent); }
-        .hero-arrow {
-            position: absolute;
-            bottom: 3rem;
-            left: 50%;
-            transform: translateX(-50%);
-            margin-top: 0;
-            padding-top: 0;
-        }
-
-        /* About */
-        .work-intro { max-width: 1100px; margin-bottom: 0.5rem; }
-        .work-intro p {
-            font-size: 0.95rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            font-weight: 300;
-            letter-spacing: 0.01em;
-        }
-        .work-intro p + p { margin-top: 0.5rem; }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            margin-top: 0.5rem;
-        }
-        .service-card {
-            padding: 0.9rem 1rem 0.9rem 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s;
-        }
-        .service-card:hover { border-top-color: var(--accent); transform: translateY(-3px); }
-        .service-card:hover h3 { color: var(--accent); }
-        .service-card h3 { font-size: 0.95rem; margin-bottom: 0.3rem; font-weight: 500; letter-spacing: 0.02em; }
-        .service-card p { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; font-weight: 300; }
-
-        /* Portfolio */
-        .portfolio-gate {
-            max-width: 500px;
-            margin: 2rem auto;
-            text-align: center;
-            padding: 2.5rem 2rem;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: var(--bg-medium);
-            transition: opacity 0.4s ease;
-        }
-        .portfolio-gate p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            font-weight: 300;
-        }
-        .gate-button {
-            padding: 1.2rem 3rem;
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            margin-top: 1rem;
-        }
-        .gate-button:hover { background: var(--accent-hover); }
-        .video-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-            margin-top: 0.75rem;
-            opacity: 0;
-            animation: none;
-            flex: 1;
-            justify-content: center;
-        }
-        .video-grid.visible {
-            animation: fadeIn 0.7s ease forwards;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(12px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
-        .video-item {
-            background: var(--bg-medium);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: border-color 0.3s;
-        }
-        .video-item:hover { border-color: rgba(218, 151, 43, 0.4); }
-        .video-wrapper {
-            position: relative;
-            width: 100%;
-            background: #000;
-            line-height: 0;
-        }
-        .video-wrapper video {
-            width: 100%;
-            display: block;
-            aspect-ratio: 16 / 9;
-            background: #000;
-        }
-        .portfolio-intro { color: var(--text-secondary); font-size: 0.95rem; font-weight: 300; line-height: 1.6; max-width: 700px; margin-bottom: 0.75rem; }
-        .video-info { padding: 0.5rem 0.75rem; }
-        .video-info h3 { font-size: 0.95rem; font-weight: 400; letter-spacing: -0.2px; }
-
-        /* Contact */
-        .contact-wrapper { max-width: 600px; margin: 0 auto; }
-        .contact-intro { margin-bottom: 1rem; }
-        .contact-intro p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; font-weight: 300; }
-        .contact-email {
-            font-size: 0.95rem;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 300;
-            letter-spacing: -0.3px;
-            display: inline-block;
-            margin: 0.5rem 0 0 0;
-            transition: color 0.2s;
-        }
-        .contact-email:hover { color: var(--accent-hover); }
-        form { display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem; max-width: 600px; }
-        input, textarea {
-            padding: 0.75rem 1rem;
-            background: var(--bg-medium);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-            font-size: 0.95rem;
-            font-family: inherit;
-            transition: all 0.2s;
-            font-weight: 300;
-        }
-        input:focus, textarea:focus { outline: none; border-color: var(--accent); background: rgba(255,255,255,0.02); }
-        input::placeholder, textarea::placeholder { color: var(--text-secondary); }
-        textarea { min-height: 70px; resize: vertical; }
-        button[type="submit"] {
-            padding: 0.75rem 2.5rem;
-            background: var(--accent);
-            color: var(--bg-dark);
-            border: none;
-            font-weight: 500;
-            cursor: pointer;
-            font-size: 0.95rem;
-            transition: all 0.2s;
-            letter-spacing: 0.5px;
-            align-self: flex-start;
-        }
-        .contact-bottom { text-align: center; padding-top: 1.5rem; }
-        .contact-bottom p { color: var(--text-secondary); font-size: 0.85rem; }
-        #portfolio h2 { margin-bottom: 0.5rem; }
-        button[type="submit"]:hover { background: var(--accent-hover); transform: translateY(-2px); }
-        #contact { padding-top: 5rem; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .section-arrow { display: none; }
-            .desktop-only-arrow { display: none; }
-            .desktop-only-copyright { display: none; }
-            .mobile-only-copyright { display: block !important; }
-
-            .hero {
-                min-height: 50vh;
-                height: 50vh;
-                padding-top: 5rem;
-                contain: layout style paint;
-                isolation: isolate;
-            }
-            .hero-video-bg {
-                position: absolute !important;
-                background-color: var(--accent);
-                background-size: cover;
-                background-position: center;
-                transform: translate3d(0,0,0);
-                -webkit-transform: translate3d(0,0,0);
-                backface-visibility: hidden;
-            }
-            nav ul { gap: 1.5rem; }
-            nav a { font-size: 0.85rem; }
-            section { padding: 5rem 5% 2rem 5%; min-height: 100vh; }
-            #contact { padding-top: 5rem; padding-bottom: 1.5rem; min-height: 100vh; }
-            #contact h2 { margin-bottom: 0.3rem; }
-            #contact .contact-intro { margin-bottom: 0.5rem; }
-            #contact .contact-intro p { margin-bottom: 0.3rem; font-size: 0.85rem; }
-            #contact .contact-email { margin: 0.3rem 0; font-size: 0.9rem; }
-            #contact form { gap: 0.4rem; margin-top: 0.5rem; }
-            #contact input, #contact textarea { padding: 0.6rem 0.8rem; font-size: 0.85rem; }
-            #contact textarea { min-height: 55px; }
-            #contact button[type="submit"] { padding: 0.6rem 1.5rem; font-size: 0.85rem; }
-            h2 { font-size: 2rem; margin-bottom: 1rem; }
-            .work-intro p { font-size: 0.9rem; line-height: 1.5; }
-            .work-intro { margin-bottom: 1rem; }
-            .services-grid { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; margin-top: 1rem; }
-            .service-card { padding: 0.8rem 0; }
-            .service-card h3 { font-size: 0.85rem; margin-bottom: 0.2rem; }
-            .service-card p { font-size: 0.75rem; line-height: 1.3; }
-            .video-grid { grid-template-columns: 1fr; }
-            .contact-intro p { font-size: 0.9rem; }
-            .contact-email { font-size: 1.2rem; }
-            form { gap: 0.8rem; }
-            input, textarea { padding: 0.8rem; font-size: 0.9rem; }
-            textarea { min-height: 70px; }
-            button[type="submit"] { padding: 0.8rem 2rem; font-size: 0.9rem; }
-
-            /* Mobile nav */
-            nav ul {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                height: 100vh;
-                width: 250px;
-                background: var(--bg-dark);
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                transition: right 0.3s;
-                z-index: 999;
-                border-left: 1px solid rgba(255,255,255,0.1);
-                display: flex;
-            }
-            nav ul.active { right: 0; }
-            .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; }
-            .hamburger span { width: 25px; height: 2px; background: var(--text-primary); transition: all 0.3s; }
-            .hamburger:hover span { background: var(--accent); }
-            .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(7px, 7px); }
-            .hamburger.active span:nth-child(2) { opacity: 0; }
-            .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
-        }
-
-        @media (min-width: 769px) {
-            .hamburger { display: none !important; }
-        }
-    </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Figure 5 · Premiere tools to make life easier</title>
+<meta name="description" content="Syncpoint syncs a whole multicam shoot in one click. Pullquote turns a client's script into a cut. Plugins for Adobe Premiere from Figure 5.">
+<link rel="canonical" href="https://figure5media.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://figure5media.com/">
+<meta property="og:title" content="Figure 5 · Premiere tools to make life easier">
+<meta property="og:description" content="Sync a whole shoot in one click. Turn a client's script into a cut.">
+<meta property="og:image" content="https://figure5media.com/apple-touch-icon.png">
+<meta name="theme-color" content="#09090a">
+<link rel="icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/Archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="site.css">
+<script>document.documentElement.className = "js";</script>
 </head>
-<body>
-    <a href="#main-content" class="skip-to-content">Skip to main content</a>
-    
-    <!-- Navigation -->
-    <nav aria-label="Main navigation">
-        <div class="container">
-            <a href="#home" class="logo">
-                <span style="color: var(--accent);">Figure 5</span>
-                <span style="height: 1.2em; width: 1px; background: var(--text-secondary); display: inline-block;"></span>
-                <span>Post-Production</span>
-            </a>
-            <div class="hamburger" id="hamburger" aria-label="Toggle navigation menu" role="button" tabindex="0">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <ul id="nav-menu">
-                <li><a href="#about">About</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
+<body class="home">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="./" aria-label="Figure 5, home">FIGURE<sup>5</sup></a>
+    <nav class="links" aria-label="Main">
+      <a href="https://syncpoint.video/">Syncpoint</a>
+      <a href="pullquote.html">Pullquote</a>
+      <a class="opt" href="#studio">Studio</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </div>
+</header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <main id="main-content">
-            <div class="hero-video-bg">
-                <img src="/background-placeholder.jpg" alt="Figure 5 Media background" style="width: 100%; height: 100%; object-fit: cover;">
-                <!--
-                TO ADD YOUR VIDEO:
-                1. Save your video file as 'background.mp4'
-                2. Upload it to the same folder as this HTML file
-                3. Replace the img tag above with:
-                <video autoplay muted loop playsinline>
-                    <source src="background.mp4" type="video/mp4">
-                </video>
-                -->
-            </div>
-            <div class="hero-content">
-                <!-- Text will be in the video itself -->
-            </div>
-        </main>
-        <a href="#about" class="section-arrow hero-arrow">↓</a>
-    </section>
+<main id="main">
+  <div class="wrap intro">
+    <h1 class="rise">Premiere tools to make life <em>easier.</em></h1>
+  </div>
 
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        
-        <div class="work-intro">
-            <p>Figure 5 Media is a Los Angeles-based post-production studio with ten years of experience partnering with startups, established brands, and Fortune 500 Companies—specializing in short-form content for brands that demand excellence.</p>
-            <p>Combining producer-level storytelling with editorial precision, Figure 5 transforms raw footage into polished narratives—streamlining workflow by eliminating the need for detailed scripts or extensive directorial oversight. Our full-service post-production includes editing, color grading, sound design, motion graphics, and delivery—with a focus on quick turnarounds without compromising quality.</p>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+      <symbol id="i-lock" viewBox="0 0 12 12"><rect x="2.5" y="5.5" width="7" height="5" rx="1" fill="none" stroke="currentColor"/><path d="M4 5.5V4a2 2 0 0 1 4 0v1.5" fill="none" stroke="currentColor"/></symbol>
+      <symbol id="i-eye" viewBox="0 0 12 12"><path d="M1 6s1.8-3.2 5-3.2S11 6 11 6 9.2 9.2 6 9.2 1 6 1 6z" fill="none" stroke="currentColor"/><circle cx="6" cy="6" r="1.5" fill="currentColor"/></symbol>
+      <symbol id="i-film" viewBox="0 0 12 12"><rect x="1.5" y="3" width="7" height="6" rx="1" fill="none" stroke="currentColor"/><path d="M8.5 5.2 11 4v4L8.5 6.8" fill="none" stroke="currentColor"/></symbol>
+      <symbol id="i-seq" viewBox="0 0 16 14"><rect x="1" y="3" width="10" height="3" rx="1" fill="#8fa9e6"/><rect x="4" y="8" width="11" height="3" rx="1" fill="#86d3a4"/><rect x="7.5" y="0.5" width="1.2" height="13" rx=".6" fill="#e0e0e4"/></symbol>
+      <symbol id="i-sel" viewBox="0 0 12 12"><path d="M3 1.5v8.5l2.3-2.1 1.6 3.3 1.3-.6-1.6-3.2H9.5z" fill="currentColor"/></symbol>
+      <symbol id="i-trk" viewBox="0 0 12 12"><path d="M1 3.5h6M1 8.5h6M7 1.5l3 2-3 2M7 6.5l3 2-3 2" fill="none" stroke="currentColor"/></symbol>
+      <symbol id="i-razor" viewBox="0 0 12 12"><path d="M2 10 8.5 3.5M7 2l3 3-1.5 1.5-3-3z" fill="none" stroke="currentColor"/></symbol>
+      <symbol id="i-pen" viewBox="0 0 12 12"><path d="M6 1.5 9.5 6 6 10.5 2.5 6z" fill="none" stroke="currentColor"/><circle cx="6" cy="6" r="1" fill="currentColor"/></symbol>
+      <symbol id="i-hand" viewBox="0 0 12 12"><path d="M3.5 7V4a.8.8 0 0 1 1.6 0v2.5V2.8a.8.8 0 0 1 1.6 0v3.7V3.3a.8.8 0 0 1 1.6 0v4.2c0 1.8-1.2 3-2.9 3-1.2 0-1.9-.5-2.6-1.5L1.7 7.3a.8.8 0 0 1 1.3-.9z" fill="none" stroke="currentColor" stroke-width=".9"/></symbol>
+      <symbol id="i-type" viewBox="0 0 12 12"><path d="M2.5 2.5h7M6 2.5v7.5" fill="none" stroke="currentColor" stroke-width="1.2"/></symbol>
+      <symbol id="i-find" viewBox="0 0 12 12"><circle cx="5" cy="5" r="3" fill="none" stroke="currentColor"/><path d="M7.3 7.3 10 10" stroke="currentColor"/></symbol>
+      <symbol id="i-folder" viewBox="0 0 12 12"><path d="M1.5 3h3l1 1h5v5.5h-9z" fill="none" stroke="currentColor"/></symbol>
+      <symbol id="i-proj" viewBox="0 0 12 12"><rect x="1.5" y="2" width="9" height="8" rx="1" fill="none" stroke="currentColor"/><path d="M1.5 4.5h9" stroke="currentColor"/></symbol>
+      <symbol id="i-sliders" viewBox="0 0 13 11"><g stroke="currentColor" stroke-width="1.1"><path d="M0 2h13M0 5.5h13M0 9h13"/></g><g fill="#1d1d1f" stroke="currentColor" stroke-width="1.1"><circle cx="4" cy="2" r="1.6"/><circle cx="9" cy="5.5" r="1.6"/><circle cx="5" cy="9" r="1.6"/></g></symbol>
+      <symbol id="i-check" viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="#3fbf7f"/><path d="M4 7.2 6.1 9.2 10 5" fill="none" stroke="#0e0e0f" stroke-width="1.6"/></symbol>
+    </defs></svg>
+
+
+  <!-- One big card for each tool; the whole card is the link. Each shows the tool itself, drawn as Premiere
+       draws it and playing by itself: Syncpoint's Timeline lining up, Pullquote's panel finding a script and
+       then building its sequence. -->
+  <section class="wrap cards" aria-label="Tools">
+    <a class="card rise" href="https://syncpoint.video/" style="--glow: 112, 171, 247">
+      <div class="shot">
+    <div class="demo mini flip" id="spMini" data-stage="before" aria-hidden="true">
+      <div class="pn sp card-panel" aria-hidden="true">
+        <div class="ptabs"><span>Effect Controls</span><span class="on">Syncpoint <i class="hb">≡</i></span></div>
+        <div class="sp-seq"><svg width="16" height="14"><use href="#i-seq"/></svg><span>Interview</span></div>
+        <div class="sp-btns"><span class="sp-btn sync">Sync</span><span class="sp-btn">Preview</span></div>
+        <div class="sp-main">
+          <div class="sp-state s-before"><b>Drop clips in the timeline, then press Sync.</b>Creates a new sequence · original unchanged</div>
+          <div class="sp-state s-running"><p>Matching audio…</p><div class="bar"><i></i></div></div>
+          <div class="sp-state s-done">
+            <p class="ans"><svg width="14" height="14"><use href="#i-check"/></svg>Synced in 8 s</p>
+            <p class="sub">New sequence created · original unchanged</p>
+            <p class="det"><i class="tri"></i>Details</p>
+            <p class="drow">9 clips in place</p>
+            <p class="drow">1 clip at the end <i class="tri r"></i></p>
+            <p class="drow">3 groups sync together · 9 clips <i class="tri r"></i></p>
+          </div>
         </div>
-
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Commercials &amp; Trailers</h3>
-                <p>Polished, high-impact spots designed to elevate brands and drive sales.</p>
-            </div>
-            <div class="service-card">
-                <h3>Event Coverage</h3>
-                <p>Dynamic recaps and sizzle reels from conferences and product launches.</p>
-            </div>
-            <div class="service-card">
-                <h3>Corporate Communications</h3>
-                <p>Executive messaging, training videos, and internal company content.</p>
-            </div>
-            <div class="service-card">
-                <h3>Social Content &amp; Vlogs</h3>
-                <p>Fast-paced, engaging storytelling that drives views, shares, and conversions.</p>
-            </div>
-            <div class="service-card">
-                <h3>On-Site Editing</h3>
-                <p>Available to travel for on-location editing and same-day delivery for time-sensitive projects.</p>
-            </div>
-            <div class="service-card">
-                <h3>AI Video Production</h3>
-                <p>Custom AI video generation with complex prompting for unique visuals and rapid delivery.</p>
-            </div>
+        <div class="sp-foot"><span>All waveforms ready</span><svg width="13" height="11" class="ic"><use href="#i-sliders"/></svg></div>
+      </div>
+      <div class="pn tlp" aria-hidden="true">
+        <div class="ptabs"><span class="ttab orig on"><i class="lb g"></i>Interview <i class="hb">≡</i></span><span class="ttab syn on"><i class="lb g"></i>Interview_synced <i class="hb">≡</i></span></div>
+        <div class="tlg">
+          <div class="tl-tools">
+            <svg class="on"><use href="#i-sel"/></svg><svg><use href="#i-trk"/></svg><svg><use href="#i-razor"/></svg><svg><use href="#i-pen"/></svg><svg><use href="#i-hand"/></svg><svg><use href="#i-type"/></svg>
+          </div>
+          <div class="tcbox"><span class="tc" data-a="10:30:00:00" data-b="10:52:48:12">10:30:00:00</span></div>
+          <div class="ruler">
+            <span class="tick" style="left:0%">10:30:00:00</span>
+            <span class="tick" style="left:25%">10:45:00:00</span>
+            <span class="tick" style="left:50%">11:00:00:00</span>
+            <span class="tick" style="left:75%">11:15:00:00</span>
+            <div class="mk ok" style="left:3%; width:77%"><span>SYNCED</span></div>
+            <div class="mk bad" style="left:88%; width:9%"><span>UNSYNCED</span></div>
+            <i class="minor"></i><i class="ticks"></i>
+            <i class="phead"></i>
+          </div>
+          <div class="heads">
+            <div class="th"><span class="patch"></span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt">V2</span><svg class="ic"><use href="#i-film"/></svg><svg class="ic"><use href="#i-eye"/></svg></div>
+            <div class="th"><span class="patch on">V1</span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">V1</span><svg class="ic"><use href="#i-film"/></svg><svg class="ic"><use href="#i-eye"/></svg></div>
+            <div class="th"><span class="patch on">A1</span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">A1</span><span class="ms">M</span><span class="ms">S</span></div>
+            <div class="th"><span class="patch"></span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">A2</span><span class="ms">M</span><span class="ms">S</span></div>
+          </div>
+          <div class="lane">
+            <div class="rowline" style="top:calc(var(--rowH) - 1px)"></div>
+            <div class="rowline" style="top:calc(2 * var(--rowH) - 1px)"></div>
+            <div class="rowline" style="top:calc(3 * var(--rowH) - 1px)"></div>
+            <!-- before: the editor's clips end to end, each camera's sound under it, the recorder's files after;
+                 after: each camera on its own track over the recorder, camera sound replaced, the drone at the end -->
+            <div class="clip v" style="--xb:48;  --rb:1; --xa:5;  --ra:0; --w:12; --d:0ms">B Cam 01.mov</div>
+            <div class="clip v" style="--xb:0;   --rb:1; --xa:4;  --ra:1; --w:16; --d:40ms">A Cam 01.mov</div>
+            <div class="clip v" style="--xb:60;  --rb:1; --xa:31; --ra:0; --w:9;  --d:80ms">B Cam 02.mov</div>
+            <div class="clip v" style="--xb:16;  --rb:1; --xa:30; --ra:1; --w:14; --d:120ms">A Cam 02.mov</div>
+            <div class="clip v x" style="--xb:80;  --rb:1; --xa:88; --ra:1; --w:7; --d:160ms">Drone 01.mp4</div>
+            <div class="clip v" style="--xb:30;  --rb:1; --xa:56; --ra:1; --w:18; --d:200ms">A Cam 03.mov</div>
+            <div class="clip v" style="--xb:69;  --rb:1; --xa:58; --ra:0; --w:11; --d:240ms">B Cam 03.mov</div>
+            <div class="clip au ca" style="--xb:48;  --rb:2; --xa:5;  --ra:2; --w:12; --d:0ms"></div>
+            <div class="clip au ca" style="--xb:0;   --rb:2; --xa:4;  --ra:2; --w:16; --d:40ms"></div>
+            <div class="clip au ca" style="--xb:60;  --rb:2; --xa:31; --ra:2; --w:9;  --d:80ms"></div>
+            <div class="clip au ca" style="--xb:16;  --rb:2; --xa:30; --ra:2; --w:14; --d:120ms"></div>
+            <div class="clip au ca" style="--xb:30;  --rb:2; --xa:56; --ra:2; --w:18; --d:200ms"></div>
+            <div class="clip au ca" style="--xb:69;  --rb:2; --xa:58; --ra:2; --w:11; --d:240ms"></div>
+            <div class="clip au" style="--xb:0;  --rb:3; --xa:3;  --ra:2; --w:19; --d:300ms">Zoom 01.wav</div>
+            <div class="clip au" style="--xb:19; --rb:3; --xa:29; --ra:2; --w:21; --d:340ms">Zoom 02.wav</div>
+            <div class="clip au" style="--xb:40; --rb:3; --xa:54; --ra:2; --w:26; --d:380ms">Zoom 03.wav</div>
+            <div class="playhead"></div>
+          </div>
+          <div class="zoombar"><i></i></div>
         </div>
-        <a href="#portfolio" class="section-arrow">↓</a>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p class="portfolio-intro">Below is a selection of work from projects where clients have permitted public sharing. Much of our work cannot be shared due to confidentiality agreements. Additional samples are available upon request.</p>
-
-        <!-- Password Gate -->
-        <div id="password-section" class="portfolio-gate" style="display:none;">
-            <p>Portfolio samples are password protected due to client confidentiality.</p>
-            <input type="password" id="portfolio-password" placeholder="Enter password"
-                style="width: 100%; max-width: 360px; padding: 1.2rem; background: var(--bg-dark); border: 1px solid rgba(255,255,255,0.1); color: var(--text-primary); font-size: 1rem; margin-bottom: 1rem; font-weight: 300;"
-                onkeydown="if(event.key==='Enter') checkPortfolioPassword()">
-            <br>
-            <button onclick="checkPortfolioPassword()" class="gate-button">View Portfolio</button>
-            <p id="password-error" style="color: var(--accent); font-size: 0.9rem; margin-top: 1rem; display: none;">Incorrect password. Please try again.</p>
+      </div>
+    </div>
+      </div>
+      <div class="card-text">
+        <div class="card-top">
+          <h2><svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect x="3" y="7" width="26" height="5" rx="1.6" fill="var(--rose)"/>
+            <rect x="3" y="13.5" width="26" height="5" rx="1.6" fill="var(--blue)"/>
+            <rect x="3" y="20" width="26" height="5" rx="1.6" fill="var(--mint)"/>
+            <rect x="14.6" y="3" width="2.8" height="26" rx="1.4" fill="#111113"/>
+            <rect x="15.3" y="3" width="1.4" height="26" rx="0.7" fill="var(--text-strong)"/>
+          </svg>Syncpoint</h2>
+          <span class="pill">$99 once</span>
         </div>
+        <p class="tagline">Sync your whole Premiere project with one click.</p>
+        <p class="what">Every camera and recorder, lined up by timecode and audio in a new sequence. No XML, nothing to relink.</p>
+        <div class="card-foot"><span class="fine">3 free syncs · Mac and Windows</span><span class="go" aria-hidden="true"></span></div>
+      </div>
+    </a>
 
-        <!-- Portfolio Content — hidden until correct password entered -->
-        <!-- VIDEO URLS: Replace each src with your GitHub Release URL:
-             https://github.com/YOUR-USERNAME/YOUR-REPO/releases/download/v1.0/your-video.mp4 -->
-        <div id="portfolio-content" class="video-grid visible">
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/6eJ3z_a2NyM"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Google Earth Engine</h3>
-                </div>
+    <a class="card rise" href="pullquote.html" style="--glow: 98, 219, 168">
+      <div class="shot">
+    <div class="demo mini flip" id="pqMini" data-stage="empty" aria-hidden="true">
+      <div class="pn card-panel">
+        <div class="ptabs"><span>Effect Controls</span><span class="on">Pullquote <i class="hb">≡</i></span></div>
+        <div class="pq-body">
+          <div class="pq-brand"><svg width="15" height="15" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg><span class="pq-name">Interview_synced</span><span class="pq-edit">Edit Script</span></div>
+          <div class="pq-meter"><i></i></div>
+          <div class="pq-main">
+            <div class="pq-sum"><span class="pq-count"><span class="lg"><i class="sw found"></i>2 soundbites found</span><span class="lg"><i class="sw check"></i>1 to check</span></span><span class="pq-building">Building · passage 2 of 3</span></div>
+
+            <div class="pq-doc">
+            <div class="pq-box">Paste the script here</div>
+            <div class="blk" style="--d:0ms"><span class="said">MAYA: </span><span class="ig">···</span> We started this company in a garage with two laptops.</div>
+            <div class="blk check" style="--d:150ms"><span class="pct">84%</span>Nobody thought it would work, including us.</div>
+            <div class="blk" style="--d:300ms">What changed everything was the first customer.</div>
             </div>
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/FQ8WRW521vM"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Discord | GDC 2025</h3>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/XGLihCr7Vt4"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Vivian Health</h3>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/T0Vyf8dXSfM"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>2025 Ascend Leadership Summit</h3>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/BuDzWPIQxMg"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>DotCal Commercial</h3>
-                </div>
-            </div>
-            <div class="video-item">
-                <div class="video-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/5Hd-er8vZkQ"
-                        style="width:100%; aspect-ratio:16/9; display:block; border:none;"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                        loading="lazy">
-                    </iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Roblox | HackWeek 2025</h3>
-                </div>
-            </div>
+            <div class="pq-done"><div class="pd-head"><svg width="14" height="14" viewBox="0 0 14 14"><circle cx="7" cy="7" r="7" fill="#3FBF7F"/><path d="M4 7.2L6.1 9.2L10 5" stroke="#16181A" stroke-width="1.6" fill="none"/></svg>Sequence created</div><div class="pd-line">3 soundbites · 96% accuracy</div><div class="pd-row"><span class="sp-btn">Back to Script</span><span class="sp-btn">New Script</span></div></div>
+          </div>
+          <div class="pq-foot"><span class="showig">Show ignored</span><span class="grow"></span><span class="sp-btn build">Build Sequence</span><svg width="13" height="11" class="ic"><use href="#i-sliders"/></svg></div>
         </div>
+      </div>
+      <div class="pn tlp" aria-hidden="true">
+        <div class="ptabs"><span class="ttab orig on"><i class="lb g"></i>Interview_synced <i class="hb">≡</i></span><span class="ttab syn on"><i class="lb g"></i>Interview_synced – Script 1 <i class="hb">≡</i></span></div>
+        <div class="tlg">
+          <div class="tl-tools">
+            <svg class="on"><use href="#i-sel"/></svg><svg><use href="#i-trk"/></svg><svg><use href="#i-razor"/></svg><svg><use href="#i-pen"/></svg><svg><use href="#i-hand"/></svg><svg><use href="#i-type"/></svg>
+          </div>
+          <div class="tcbox"><span class="tc" data-a="10:30:00:00" data-b="00:00:00:00">10:30:00:00</span></div>
+          <div class="ruler">
+            <span class="tick" style="left:0%" data-a="10:30:00:00" data-b="00:00:00:00">10:30:00:00</span>
+            <span class="tick" style="left:25%" data-a="10:45:00:00" data-b="00:00:30:00">10:45:00:00</span>
+            <span class="tick" style="left:50%" data-a="11:00:00:00" data-b="00:01:00:00">11:00:00:00</span>
+            <span class="tick" style="left:75%" data-a="11:15:00:00" data-b="00:01:30:00">11:15:00:00</span>
+            <i class="minor"></i><i class="ticks"></i>
+            <i class="phead"></i>
+          </div>
+          <div class="heads">
+            <div class="th"><span class="patch"></span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt">V2</span><svg class="ic"><use href="#i-film"/></svg><svg class="ic"><use href="#i-eye"/></svg></div>
+            <div class="th"><span class="patch on">V1</span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">V1</span><svg class="ic"><use href="#i-film"/></svg><svg class="ic"><use href="#i-eye"/></svg></div>
+            <div class="th"><span class="patch on">A1</span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">A1</span><span class="ms">M</span><span class="ms">S</span></div>
+            <div class="th"><span class="patch"></span><svg class="ic"><use href="#i-lock"/></svg><span class="tgt on">A2</span><span class="ms">M</span><span class="ms">S</span></div>
+          </div>
+          <div class="lane">
+            <div class="rowline" style="top:calc(var(--rowH) - 1px)"></div>
+            <div class="rowline" style="top:calc(2 * var(--rowH) - 1px)"></div>
+            <div class="rowline" style="top:calc(3 * var(--rowH) - 1px)"></div>
+            <!-- before: the synced interview, both cameras over the recorder; after: the soundbites the script
+                 asks for, each with both cameras and the recorder, closed up in script order -->
+            <div class="clip v src" style="--xb:3; --rb:0; --xa:3; --w:92">B Cam 01.mov</div>
+            <div class="clip v src" style="--xb:2; --rb:1; --xa:2; --w:94">A Cam 01.mov</div>
+            <div class="clip au src" style="--xb:2; --rb:2; --xa:2; --w:95">Zoom 01.wav</div>
+            <div class="clip v seg" style="--xb:52; --rb:0; --xa:2; --w:13; --d:0ms">B Cam 01.mov</div>
+            <div class="clip v seg" style="--xb:52; --rb:1; --xa:2; --w:13; --d:0ms">A Cam 01.mov</div>
+            <div class="clip au seg" style="--xb:52; --rb:2; --xa:2; --w:13; --d:0ms">Zoom 01.wav</div>
+            <div class="clip v seg" style="--xb:14; --rb:0; --xa:15; --w:10; --d:70ms">B Cam 01.mov</div>
+            <div class="clip v seg" style="--xb:14; --rb:1; --xa:15; --w:10; --d:70ms">A Cam 01.mov</div>
+            <div class="clip au seg" style="--xb:14; --rb:2; --xa:15; --w:10; --d:70ms">Zoom 01.wav</div>
+            <div class="clip v seg" style="--xb:74; --rb:0; --xa:25; --w:11; --d:140ms">B Cam 01.mov</div>
+            <div class="clip v seg" style="--xb:74; --rb:1; --xa:25; --w:11; --d:140ms">A Cam 01.mov</div>
+            <div class="clip au seg" style="--xb:74; --rb:2; --xa:25; --w:11; --d:140ms">Zoom 01.wav</div>
+            <div class="playhead"></div>
+          </div>
+          <div class="zoombar"><i></i></div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="card-text">
+        <div class="card-top">
+          <h2><svg viewBox="0 0 32 32" aria-hidden="true"><g transform="translate(16 16.2) scale(1.2) translate(-16.03 -16.15)"><g transform="translate(0 -1.3)"><path d="M7.07 9H12.84A2.6 2.6 0 0 1 15.44 11.6V15.06A2.6 2.6 0 0 1 12.84 17.66H10.25Q8.98 17.66 8.98 18.93C9.08 20.2 9.75 21.3 10.47 21.95A0.86 0.86 0 0 1 9.62 23.3C6.7 22.45 4.47 19.7 4.47 16.6V11.6A2.6 2.6 0 0 1 7.07 9Z" fill="#66efc0"/></g><g transform="translate(32.06 1.3) scale(-1 1)"><path d="M7.07 9H12.84A2.6 2.6 0 0 1 15.44 11.6V15.06A2.6 2.6 0 0 1 12.84 17.66H10.25Q8.98 17.66 8.98 18.93C9.08 20.2 9.75 21.3 10.47 21.95A0.86 0.86 0 0 1 9.62 23.3C6.7 22.45 4.47 19.7 4.47 16.6V11.6A2.6 2.6 0 0 1 7.07 9Z" fill="#ffbf50"/></g></g></svg>Pullquote</h2>
+          <span class="pill gold">Free</span>
+        </div>
+        <p class="tagline">Paste the script. Get the cut.</p>
+        <p class="what">Finds every scripted line in your interviews and builds the soundbites into a new sequence, in script order.</p>
+        <div class="card-foot"><span class="fine">Runs on your computer · Nothing uploaded</span><span class="go" aria-hidden="true"></span></div>
+      </div>
+    </a>
+  </section>
 
-        <a href="#contact" class="section-arrow">↓</a>
-    </section>
+  <div class="wrap">
+    <div class="promises reveal">
+      <div><b>Inside Premiere</b><span>Each tool is a panel in your workspace. No round trips, no XML, no second app.</span></div>
+      <div><b>Your sequence stays yours</b><span>Both build a new sequence beside the original. Nothing you made is changed.</span></div>
+      <div><b>No subscriptions</b><span>Syncpoint is $99, once. Pullquote is free.</span></div>
+    </div>
+  </div>
 
-    <!-- Contact Section -->
-    <section id="contact">
+  <section id="together" class="band flow-band">
+    <div class="wrap">
+      <div class="head center reveal">
+        <h2>From card dump to rough cut</h2>
+        <p>The two tools pick up where the other leaves off.</p>
+      </div>
+      <ol class="flow reveal">
+        <li><span class="n">1</span><b>Drop the shoot in a timeline</b><span>Cameras, recorders, whatever came off the cards, in any order.</span></li>
+        <li><span class="n">2</span><b>Syncpoint lines it up</b><span>One press, and every angle sits over the recorder in a new sequence.</span></li>
+        <li><span class="n">3</span><b>Pullquote cuts it to the script</b><span>Paste what the client sent. The soundbites come out in script order, still in sync.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="studio" class="band">
+    <div class="wrap split reveal">
+      <h2>The studio</h2>
+      <div class="stack">
+        <p class="lede">Figure 5 is also a post-production studio, with ten years of cutting short-form work for startups, established brands and Fortune 500 companies.</p>
+        <ul class="chips">
+          <li>Commercials &amp; trailers</li>
+          <li>Event coverage</li>
+          <li>Corporate communications</li>
+          <li>Social content</li>
+          <li>On-site editing</li>
+          <li>AI video production</li>
+        </ul>
+        <p class="fine">Most of the work is under confidentiality agreements. Samples are shared on request.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="band">
+    <div class="wrap split reveal">
+      <div class="stack">
         <h2>Contact</h2>
-        
-        <div class="contact-wrapper">
-            <div class="contact-intro">
-                <p>Available for project-based work and ongoing retainers. Rates provided upon request based on project scope.</p>
-                <a href="mailto:info@figure5media.com" class="contact-email">info@figure5media.com</a>
-            </div>
+        <p>For a project, a plugin question, or anything else.</p>
+        <a class="email" href="mailto:info@figure5media.com">info@figure5media.com</a>
+      </div>
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Name" aria-label="Name" required>
+        <textarea name="message" placeholder="How can we help?" aria-label="Message" required></textarea>
+        <button class="btn solid" type="submit">Send</button>
+        <p class="fine">Opens your email with the message ready to send.</p>
+      </form>
+    </div>
+  </section>
+</main>
 
-            <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                <input type="hidden" name="form-name" value="contact">
-                <p style="display: none;">
-                    <label>Don't fill this out if you're human: <input name="bot-field"></label>
-                </p>
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="text" name="company" placeholder="Company">
-                <textarea name="message" placeholder="Project details" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-            <p id="form-success" style="color: var(--accent); margin-top: 1rem; display: none;">Thanks! We'll get back to you soon.</p>
-        </div>
-        
-        <!-- Bottom of contact: email in arrow position + copyright -->
-        <div class="contact-bottom">
-            <a href="mailto:info@figure5media.com" class="section-arrow desktop-only-arrow" style="font-size: 0.95rem; letter-spacing: -0.3px; font-weight: 300; margin-bottom: 0.75rem;">info@figure5media.com</a>
-            <p>© 2026 Figure 5 Media. All rights reserved.</p>
-        </div>
-    </section>
+<footer class="big">
+  <div class="wrap">
+    <p>© 2026 Figure 5 LLC</p>
+    <nav aria-label="Footer">
+      <a href="https://syncpoint.video/">Syncpoint</a>
+      <a href="pullquote.html">Pullquote</a>
+      <a href="mailto:info@figure5media.com">Email</a>
+    </nav>
+  </div>
+  <div class="watermark" aria-hidden="true">FIGURE<sup>5</sup></div>
+</footer>
 
-    <script>
-        // Hamburger menu
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-
-        function toggleMenu() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        }
-
-        hamburger.addEventListener('click', toggleMenu);
-        hamburger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                toggleMenu();
-            }
-        });
-
-        document.querySelectorAll('#nav-menu a').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!navMenu.contains(e.target) && !hamburger.contains(e.target)) {
-                closeMenu();
-            }
-        });
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-
-        // ── Portfolio password ────────────────────────────────────────────────
-        // Set to true to require a password, false to show videos openly.
-        const PASSWORD_PROTECTED = false;
-
-        // SHA-256 hash of the password — the actual password never appears in source.
-        // To change the password: run this in your browser console:
-        //   crypto.subtle.digest('SHA-256', new TextEncoder().encode('NEWPASSWORD'))
-        //     .then(b => console.log([...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')))
-        // Then replace CORRECT_HASH below with the output.
-        const CORRECT_HASH = '47cfbaf07f6ec02cb123f3eb689096c5681b393317b3879b8ab05656b73a2eac';
-
-        // On page load, show or hide based on PASSWORD_PROTECTED flag
-        if (PASSWORD_PROTECTED) {
-            document.getElementById('portfolio-content').style.display = 'none';
-        } else {
-            document.getElementById('password-section').style.display = 'none';
-            const content = document.getElementById('portfolio-content');
-            content.style.display = 'grid';
-            requestAnimationFrame(() => content.classList.add('visible'));
-        }
-
-        async function checkPortfolioPassword() {
-            const input = document.getElementById('portfolio-password').value;
-            const error = document.getElementById('password-error');
-
-            const hashBuffer = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(input));
-            const hashHex = [...new Uint8Array(hashBuffer)].map(b => b.toString(16).padStart(2, '0')).join('');
-
-            if (hashHex === CORRECT_HASH) {
-                const gate = document.getElementById('password-section');
-                const content = document.getElementById('portfolio-content');
-
-                // Fade out gate
-                gate.style.opacity = '0';
-                setTimeout(() => {
-                    gate.style.displa
+<script src="demos.js"></script>
+<script>
+  /* The contact form. The site is plain files on GitHub Pages, with nothing behind it to receive a form, so Send
+     opens the visitor's own email with the message written and addressed. (The old site's form was marked up
+     for Netlify, which this site was never on: it sent nothing.) */
+  var f = document.getElementById("contactForm");
+  f.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var name = f.elements.name.value.trim(), msg = f.elements.message.value.trim();
+    location.href = "mailto:info@figure5media.com?subject=" + encodeURIComponent("From " + name + ", via figure5media.com") + "&body=" + encodeURIComponent(msg + "\n\n" + name);
+  });
+</script>
+</body>
+</html>
