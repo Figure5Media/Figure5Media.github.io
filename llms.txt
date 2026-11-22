@@ -21,7 +21,11 @@
 
 - [Figure 5 home: both tools](https://figure5media.com/)
 - [Pullquote: what it does, how it works, questions](https://figure5media.com/pullquote)
+- [How to cut an interview to a client's script in Premiere](https://figure5media.com/cut-interview-to-script-premiere)
+- [How to pull selects from a transcript in Premiere](https://figure5media.com/pull-selects-from-transcript-premiere)
+- [Pullquote and Premiere's Paper Edit: what each one does](https://figure5media.com/pullquote-vs-paper-edit)
+- [All guides](https://figure5media.com/guides)
 - [Syncpoint](https://syncpoint.video/)
 - [The studio: post-production services and portfolio](https://figure5media.com/studio)
-- The home and Pullquote pages are also available as plain Markdown: https://figure5media.com/index.md and https://figure5media.com/pullquote.md
+- Every page above on figure5media.com is also available as plain Markdown: add .md to its address (https://figure5media.com/pullquote.md; the home page is https://figure5media.com/index.md)
 - Contact: info@figure5media.com
