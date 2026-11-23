@@ -39,7 +39,7 @@ Any breach of sections 3 or 4 ends your license immediately and without notice, 
 
 ## 6. Data
 
-Your script, your transcripts, your project and your media stay on your computer; the software sends none of them anywhere. When the panel opens, and from time to time while it is open, it requests one small file from our website (figure5media.com) to learn whether there is a newer version, a notice from us, or whether your version has been retired. That request says which version of the software is asking, so that we can count how many copies of each version are in use. It contains nothing else, and nothing about you, your computer or your work; like any visit to a website, it reaches our web host from your internet address.
+Your script, your transcripts, your project and your media stay on your computer; the software sends none of them anywhere. When the panel opens, and from time to time while it is open, it requests one small file from us (from count.syncpoint.video, or from our website, figure5media.com) to learn whether there is a newer version, a notice from us, or whether your version has been retired. That request says which version of the software is asking, and whether it is this copy's first request ever, its first this month and its first today, so that we can count how many copies are in use. It contains nothing else: no identifier, and nothing about you, your computer or your work. Like any visit to a website, it reaches our web host from your internet address.
 
 ## 7. Changes: updates, retiring a version, and charging
 
