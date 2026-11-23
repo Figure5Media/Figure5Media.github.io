@@ -6,9 +6,9 @@
 
 - A plugin (panel) for Adobe Premiere 26.0 or later. Free: no account, no trial, no subscription.
 - Paste the script a client sent. Pullquote finds where each line was said in the sequence, using the transcript Premiere itself makes in its Text panel. It does not transcribe; clips without a transcript are skipped and named.
-- Lines found are marked green, lines that are probably right are amber with a percentage, lines never said stay plain. Names, timecodes, links and editor's marks in the script are ignored.
+- Lines found are marked green, lines that are probably right are amber and marked Check, with a note comparing the script line to what Premiere heard, lines never said stay plain. Names, timecodes, links and editor's marks in the script are ignored.
 - One button builds a new sequence of those soundbites in script order, with every camera angle and the audio recorder in sync. The original sequence is never changed.
-- If a line was said more than once, the other takes can be chosen. Words can be cut and blocks reordered before building.
+- If a line was said more than once, the other takes can be chosen. Words can be cut, blocks reordered or duplicated, and extra soundbites added before building.
 - Everything runs on the editor's computer inside Premiere; the script, transcript and footage are not uploaded.
 - A faster way to make a paper edit, pull selects or cut an interview to a script. Premiere's own Paper Edit builds a cut from passages the editor finds and highlights by hand; Pullquote starts from the script and finds them.
 - Not yet read: clips with a speed change, nested sequences, multicam clips.

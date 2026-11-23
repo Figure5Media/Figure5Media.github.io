@@ -26,7 +26,7 @@ It saves the copying and pasting. Finding the lines is still yours to do: Paper 
 
 Pullquote is a free panel for Premiere that starts from the other end. Paste the client's script into it, exactly as they sent it. It finds where each line was said, even when the wording was tidied, and ignores the names, timecodes and notes clients leave in.
 
-Lines it found turn green. Lines it is less sure of turn amber, with a percentage, so you know which to check. A line nobody said stays plain. Click any word to jump the playhead to it. If a line was said more than once, you can step through the takes.
+Lines it found turn green. Lines it is less sure of turn amber and say Check, so you know which to listen to. A line nobody said stays plain. Click any word to jump the playhead to it. If a line was said more than once, you can step through the takes.
 
 Then press Build Sequence. You get a new sequence of the soundbites in script order, with every camera and the recorder still in sync. Your original sequence is not changed.
 

@@ -15,7 +15,7 @@ Pullquote reads the transcript Premiere makes in its Text panel. Transcribe the 
 
 **Paste the script** Exactly as the client sent it. Names, timecodes, links and notes are set aside on their own.
 
-**Check the matches** Green was found. Amber is probably right and shows how sure. Click any block to jump the playhead there.
+**Check the matches** Green was found. Amber says Check: click it to compare your script with what Premiere heard. Click any block to jump the playhead there.
 
 **Build the sequence** One button makes a new sequence of the soundbites beside your original, ready to cut.
 
@@ -31,7 +31,7 @@ Client scripts are messy and interviews wander. Pullquote is built for both.
 
 **Pick the better take** If a line was said more than once, the other takes show under it.
 
-**Trim and reorder** Cross out words you don't want, and drag blocks to change the order.
+**Trim and reorder** Cross out words you don't want, drag blocks to change the order, and add a soundbite the script left out.
 
 **No surprise jump cuts** A marker goes wherever a cut splits a passage, so you know where to cover.
 
@@ -72,7 +72,7 @@ No. Everything runs on your computer. Nothing is uploaded, and there is no accou
 It stays plain in the panel, outside the green and amber blocks, and is left out of the new sequence. The line under the sequence's name counts how many were found, how many to check, and how many weren't found.
 
 ### What if the speaker said a line more than once?
-Pullquote picks one and shows the other takes under it. Click through them and choose the one you want before you build.
+Pullquote picks one and shows the other takes under it. Click through them and choose the one you want before you build, or duplicate the block to keep two takes.
 
 ### What can't it do yet?
 Clips with a speed change, nested sequences and multicam clips aren't read yet. Your sequence's own markers don't carry into the new one.

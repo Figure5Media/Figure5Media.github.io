@@ -14,7 +14,7 @@ It is the right tool when you are the one deciding what stays, reading through a
 
 Pullquote is a free panel from Figure 5. You paste in a script, and it finds where each line was said in the transcript Premiere made of your sequence. It copes with reworded lines, with lines said in a different order, and with the names, timecodes and editor's marks that come in a client's document.
 
-It shows what it found in green, what to double-check in amber with a percentage, and what was never said. One press builds a new sequence of those soundbites in script order.
+It shows what it found in green, what to double-check in amber, and what was never said. One press builds a new sequence of those soundbites in script order.
 
 It is the right tool when someone else has already chosen, and handed you the lines in writing.
 
