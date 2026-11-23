@@ -454,6 +454,22 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 /* The panel as of 2026-11-22: Search beside New Script, the two links at the end of the count's line, "Check" on an
    amber block, and the takes row at the foot of a line said twice. */
 .pq-name { flex: 0 1 auto; }
+/* A paste waits in the box for Find Soundbites (2026-11-22): the box keeps its frame around the pasted script, and the
+   button, grey over an empty box, turns blue and is pressed. */
+.pq-brand { position: relative; }
+.pq-go { position: absolute; right: 0; top: 50%; transform: translateY(-50%); padding: 3px 13px; font-size: 12px; font-weight: 600; border: 1.5px solid #4a4a4a; border-radius: 999px; color: #777; white-space: nowrap; transition: background 120ms, transform 120ms, opacity 200ms, color 200ms, border-color 200ms; }
+[data-stage="pasted"] .pq-go { border-color: #2680eb; color: #4b9cf5; }
+.go .pq-go { background: rgba(38,128,235,.3); transform: translateY(-50%) scale(0.95); }
+:is([data-stage="matched"], [data-stage="building"], [data-stage="built"]) .pq-go { opacity: 0; }
+#pqMini .pq-go { padding: 2px 11px; font-size: 11.5px; }
+:is(.demo.pq, #pqMini):is([data-stage="empty"], [data-stage="pasted"]) .sp-btn.build { opacity: 0; }
+.blk, .plain { position: relative; }
+[data-stage="pasted"] .pq-box { opacity: 1; color: transparent; }
+[data-stage="pasted"] .pq-box::before { display: none; }
+[data-stage="pasted"] :is(.blk, .plain) { margin-left: 2px; }
+.sw { width: 8px; height: 8px; border-radius: 4px; box-sizing: border-box; }
+.sw.found { background: var(--k-green); border: 0; }
+.sw.check { background: var(--k-amber); border: 0; }
 .pq-find { flex: 1 1 60px; min-width: 0; max-width: 150px; display: flex; align-items: center; height: 24px; margin-left: 10px; padding: 0 8px; box-sizing: border-box; border: 1px solid #4a4a4a; border-radius: 6px; background: #111; font-size: 12px; color: var(--k-faint); overflow: hidden; white-space: nowrap; opacity: 0; transition: opacity 250ms; }
 .pq-find .ic { flex: none; width: 12px; height: 12px; margin-right: 6px; }
 .pq-edit { margin-left: auto; }

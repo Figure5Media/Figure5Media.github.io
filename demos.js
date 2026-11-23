@@ -2,7 +2,7 @@
    finished result, still.
    The home page's two cards share one template: the tool's panel, a press, the bar for a moment, then its
    Timeline with the clips moving. Pullquote's own page has the whole corner of Premiere: the empty box, the script
-   pasted, the passages found, a press of Build Sequence, the bar while it builds, the finished screen. */
+   pasted, a press of Find Soundbites, the passages found, a press of Build Sequence, the bar while it builds, the finished screen. */
 (function () {
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -13,7 +13,7 @@
     function later(ms, f) { timers.push(setTimeout(f, ms)); }
     function cycle() {
       running = true;
-      demo.classList.add("instant"); demo.classList.remove("press"); stage(first); void demo.offsetWidth; demo.classList.remove("instant");
+      demo.classList.add("instant"); demo.classList.remove("press"); demo.classList.remove("go"); stage(first); void demo.offsetWidth; demo.classList.remove("instant");
       steps.forEach(function (s, i) {
         later(s[0], i < steps.length - 1 ? s[1] : function () { if (!paused && visible) cycle(); else running = false; });
       });
@@ -64,7 +64,8 @@
     var stage = stager(demo, "built");
     var steps = [
       [t[0], function () { stage("pasted"); }],
-      [t[1], function () { stage("matched"); }],
+      [t[1] - 300, function () { demo.classList.add("go"); }],                      // Find Soundbites is pressed: a paste waits for it
+      [t[1], function () { demo.classList.remove("go"); stage("matched"); }],
       [t[2], function () { demo.classList.add("press"); }],
       [t[2] + 300, function () { demo.classList.remove("press"); stage("building"); }]
     ];
@@ -72,7 +73,7 @@
     steps.push([t[2] + 1500 + (beat || 0), function () { stage("built"); }], [t[3]]);
     player(demo, play, "empty", "built", stage, steps);
   }
-  pullquote("pqMini", null, [1000, 1900, 3300, 11400], 1300);
+  pullquote("pqMini", null, [900, 2100, 3500, 11600], 1300);
   pullquote("pqDemo", document.getElementById("pqPlay"), [1800, 3300, 6300, 14200], 0);
 
   // The cards' light follows the pointer; sections rise in as they are reached.
