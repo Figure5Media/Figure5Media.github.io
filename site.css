@@ -450,10 +450,35 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .pd-row { display: flex; gap: 8px; margin-top: 16px; }
 [data-stage="built"] .pq-main > :not(.pq-done) { opacity: 0; }
 [data-stage="built"] .pq-done { opacity: 1; }
-[data-stage="built"] :is(.pq-edit, .showig, .sp-btn.build) { opacity: 0; }
+[data-stage="built"] :is(.showig, .sp-btn.build) { opacity: 0; }
 /* The panel as of 2026-11-22: Search beside New Script, the two links at the end of the count's line, "Check" on an
    amber block, and the takes row at the foot of a line said twice. */
 .pq-name { flex: 0 1 auto; }
+/* The finished screen as relaid on 2026-11-22: one left edge, three figures, the two ways on at the top right, and
+   the Syncpoint line at the foot. */
+.pq-back { display: none; flex: none; margin-left: auto; margin-right: 8px; padding: 3px 13px; font-size: 12px; font-weight: 600; border: 1.5px solid #6a6a70; border-radius: 999px; color: #e6e6e9; white-space: nowrap; }
+[data-stage="built"] .pq-back { display: block; }
+[data-stage="built"] .pq-find { display: none; }
+[data-stage="built"] .pq-back + .pq-edit { margin-left: 0; }
+.pq-sp { display: none; flex: 1 1 auto; min-width: 0; font-size: 11px; color: var(--k-faint); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pq-sp i { font-style: normal; color: #4b9cf5; }
+[data-stage="built"] .pq-sp { display: block; }
+[data-stage="built"] .showig { display: none; }
+[data-stage="built"] .pq-foot .grow, [data-stage="built"] .sp-btn.build { display: none; }
+.pd-top { display: flex; align-items: flex-start; margin-top: 4px; }
+.pd-top svg { flex: none; margin: 3px 10px 0 0; }
+.pd-t { font-size: 14px; font-weight: 700; color: var(--k-strong); }
+.pd-n { margin-top: 1px; color: var(--k-dim); }
+.pd-stats { display: flex; margin-top: 12px; padding: 8px 0; border-top: 1px solid var(--k-line); border-bottom: 1px solid var(--k-line); }
+.pd-stats > div { flex: 1 1 0; min-width: 0; }
+.pd-stats b { display: block; font-size: 16px; font-weight: 700; color: var(--k-strong); line-height: 1.3; }
+.pd-stats span { display: block; font-size: 10px; color: var(--k-faint); }
+.pd-lh { display: flex; align-items: center; justify-content: space-between; margin: 14px 0 6px; font-size: 10px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--k-faint); }
+.pd-lh .pq-link { margin: 0; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.pd-li { padding: 6px 9px; border-radius: 4px; background: rgba(255,255,255,.04); }
+#pqMini .pd-top { margin-top: 0; } #pqMini .pd-t { font-size: 12.5px; } #pqMini .pd-n { font-size: 11px; }
+#pqMini .pd-stats { margin-top: 6px; padding: 4px 0; } #pqMini .pd-stats b { font-size: 13px; }
+#pqMini .pq-back { padding: 2px 10px; font-size: 11.5px; }
 /* A paste waits in the box for Find Soundbites (2026-11-22): the box keeps its frame around the pasted script, and the
    button, grey over an empty box, turns blue and is pressed. */
 .pq-brand { position: relative; }
