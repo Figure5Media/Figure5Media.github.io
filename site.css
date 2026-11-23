@@ -460,6 +460,7 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .pq-find + .pq-edit { margin-left: auto; }
 .pq-find { margin-right: 8px; }
 @media (min-width: 761px) { .demo.pq .pq-doc { height: 236px; } }
+@media (min-width: 761px) and (max-width: 1040px) { .demo.pq .pq-doc { height: 262px; } .demo.pq .pq-count .lg:nth-child(n+3) { display: none; } }
 @media (max-width: 760px) { .demo.pq .pq-doc { height: 304px; } .demo.pq .pq-count .lg:nth-child(n+2) { display: none; } }
 .pq-count { flex: 1 1 auto; min-width: 0; overflow: hidden; }
 .pq-links { flex: none; display: flex; margin-left: auto; }
