@@ -13,7 +13,7 @@
     function later(ms, f) { timers.push(setTimeout(f, ms)); }
     function cycle() {
       running = true;
-      demo.classList.add("instant"); demo.classList.remove("press"); demo.classList.remove("go"); stage(first); void demo.offsetWidth; demo.classList.remove("instant");
+      demo.classList.add("instant"); demo.classList.remove("press"); demo.classList.remove("finding"); stage(first); void demo.offsetWidth; demo.classList.remove("instant");
       steps.forEach(function (s, i) {
         later(s[0], i < steps.length - 1 ? s[1] : function () { if (!paused && visible) cycle(); else running = false; });
       });
@@ -64,8 +64,8 @@
     var stage = stager(demo, "built");
     var steps = [
       [t[0], function () { stage("pasted"); }],
-      [t[1] - 300, function () { demo.classList.add("go"); }],                      // Find Soundbites is pressed: a paste waits for it
-      [t[1], function () { demo.classList.remove("go"); stage("matched"); }],
+      [t[1] - 300, function () { demo.classList.add("finding"); }],                      // Find Soundbites is pressed: a paste waits for it
+      [t[1], function () { demo.classList.remove("finding"); stage("matched"); }],
       [t[2], function () { demo.classList.add("press"); }],
       [t[2] + 300, function () { demo.classList.remove("press"); stage("building"); }]
     ];

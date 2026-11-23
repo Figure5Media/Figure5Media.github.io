@@ -118,7 +118,7 @@ nav.links a:hover { color: var(--gold); }
 .sp-seq { display: flex; align-items: center; gap: 8px; padding: 12px 14px 10px; font-size: 12px; color: #e0e0e4; min-width: 0; }
 .sp-seq span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .sp-btns { display: flex; gap: 8px; padding: 0 14px 12px; }
-.sp-btn { font-size: 12px; font-weight: 600; padding: 4px 16px; border-radius: 999px; border: 1.5px solid #6a6a70; color: #e6e6e9; transition: background 120ms, transform 120ms, opacity 200ms; white-space: nowrap; }
+.sp-btn { font-size: 12px; font-weight: 600; padding: 4px 10px; border-radius: 999px; border: 1.5px solid #6a6a70; color: #e6e6e9; transition: background 120ms, transform 120ms, opacity 200ms; white-space: nowrap; }
 .sp-btn.sync { border-color: #2680eb; background: rgba(38,128,235,.16); color: #cfe2fb; }
 .press .sp-btn.sync { background: rgba(38,128,235,.45); transform: scale(0.95); }
 .sp-main { position: relative; flex: 1; min-height: 142px; padding: 0 14px; font-size: 11.5px; }
@@ -192,10 +192,11 @@ nav.links a:hover { color: var(--gold); }
 .ruler .ticks { position: absolute; left: 0; right: 0; bottom: 0; height: 7px; background: repeating-linear-gradient(90deg, #55555b 0 1px, transparent 1px 25%); }
 .ruler .minor { position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: repeating-linear-gradient(90deg, #3a3a3f 0 1px, transparent 1px 10px); }
 .tick { position: absolute; top: 3px; font-size: 9.5px; color: var(--pr-dim); font-variant-numeric: tabular-nums; transform: translateX(3px); white-space: nowrap; }
-.mk { position: absolute; top: 17px; height: 9px; border-radius: 1px; opacity: 0; transition: opacity 400ms ease 900ms; }
-.mk span { position: absolute; left: 10px; top: 0; font-size: 7.5px; font-weight: 700; letter-spacing: 0.06em; line-height: 9px; color: rgba(10,10,11,.85); white-space: nowrap; }
-.mk::before { content: ""; position: absolute; left: 0; top: -2px; width: 7px; height: 11px; background: inherit; clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%); filter: brightness(1.15); }
-.mk.ok { background: #3fcf8e; } .mk.bad { background: #e46a78; }
+/* Syncpoint's markers are point markers: Premiere draws each as a small marker on the ruler, no bar. */
+.mk { position: absolute; top: 15px; width: 0; height: 11px; opacity: 0; transition: opacity 400ms ease 900ms; }
+.mk span { display: none; }
+.mk::before { content: ""; position: absolute; left: -4px; top: 0; width: 8px; height: 11px; background: currentColor; clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%); }
+.mk.ok { color: #3fcf8e; } .mk.bad { color: #e46a78; }
 [data-stage="done"] .mk { opacity: 1; }
 .heads { display: grid; grid-template-rows: repeat(4, var(--rowH)); }
 .th { display: flex; align-items: center; gap: 7px; padding: 0 8px 0 4px; border-bottom: 1px solid var(--pr-line); background: #222225; }
@@ -416,7 +417,9 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .demo.flip:is([data-stage="shown"], [data-stage="built"], [data-stage="done"]) > .card-panel { opacity: 0; }
 #pqMini .pq-body { padding: 6px 12px 0; }
 #pqMini .pq-foot { height: 30px; }
-#pqMini .sp-btn.build { padding: 2px 13px; font-size: 11.5px; }   /* a button that fits its bar: at full size it ran over the script above and the panel's edge below */
+#pqMini .sp-btn.build { padding: 2px 8px; font-size: 11.5px; }
+#pqMini .pq-edit { padding: 2px 8px; font-size: 11.5px; }   /* the same height as Build Sequence beside it, as in the panel */
+/* a button that fits its bar: at full size it ran over the script above and the panel's edge below */
 #pqMini .pq-meter { margin: 3px 0 5px; }
 #pqMini .pq-doc { height: 99px; }
 #pqMini :is(.blk, .plain) { margin: 5px 0; }
@@ -431,7 +434,7 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .pq-meter { background: transparent; }
 [data-stage="building"] .pq-meter { background: var(--k-line); }
 [data-stage="building"] .pq-meter i { width: 100%; transition: width 1100ms linear; }
-.pq-edit { padding: 3px 13px; font-size: 12px; font-weight: 600; border: 1.5px solid #6a6a70; border-radius: 999px; color: #e6e6e9; }
+.pq-edit { padding: 3px 9px; font-size: 12px; font-weight: 600; border: 1.5px solid #6a6a70; border-radius: 999px; color: #e6e6e9; }
 .pq-main { position: relative; display: flex; flex-direction: column; }
 .pq-main > * { transition: opacity 300ms; }
 .pq-building { display: none; color: var(--k-text); }
@@ -456,7 +459,7 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .pq-name { flex: 0 1 auto; }
 /* The finished screen as relaid on 2026-11-22: one left edge, three figures, the two ways on at the top right, and
    the Syncpoint line at the foot. */
-.pq-back { display: none; flex: none; margin-left: auto; margin-right: 8px; padding: 3px 13px; font-size: 12px; font-weight: 600; border: 1.5px solid #6a6a70; border-radius: 999px; color: #e6e6e9; white-space: nowrap; }
+.pq-back { display: none; flex: none; margin-left: auto; margin-right: 8px; padding: 3px 9px; font-size: 12px; font-weight: 600; border: 1.5px solid #6a6a70; border-radius: 999px; color: #e6e6e9; white-space: nowrap; }
 [data-stage="built"] .pq-back { display: block; }
 [data-stage="built"] .pq-find { display: none; }
 [data-stage="built"] .pq-back + .pq-edit { margin-left: 0; }
@@ -478,15 +481,15 @@ main > section.cards { gap: 24px; padding-block: 0 clamp(40px, 6vw, 72px); }
 .pd-li { padding: 6px 9px; border-radius: 4px; background: rgba(255,255,255,.04); }
 #pqMini .pd-top { margin-top: 0; } #pqMini .pd-t { font-size: 12.5px; } #pqMini .pd-n { font-size: 11px; }
 #pqMini .pd-stats { margin-top: 6px; padding: 4px 0; } #pqMini .pd-stats b { font-size: 13px; }
-#pqMini .pq-back { padding: 2px 10px; font-size: 11.5px; }
+#pqMini .pq-back { padding: 2px 7px; font-size: 11.5px; }
 /* A paste waits in the box for Find Soundbites (2026-11-22): the box keeps its frame around the pasted script, and the
    button, grey over an empty box, turns blue and is pressed. */
 .pq-brand { position: relative; }
-.pq-go { position: absolute; right: 0; top: 50%; transform: translateY(-50%); padding: 3px 13px; font-size: 12px; font-weight: 600; border: 1.5px solid #4a4a4a; border-radius: 999px; color: #777; white-space: nowrap; transition: background 120ms, transform 120ms, opacity 200ms, color 200ms, border-color 200ms; }
+.pq-go { position: absolute; right: 0; top: 50%; transform: translateY(-50%); padding: 3px 9px; font-size: 12px; font-weight: 600; border: 1.5px solid #4a4a4a; border-radius: 999px; color: #777; white-space: nowrap; transition: background 120ms, transform 120ms, opacity 200ms, color 200ms, border-color 200ms; }
 [data-stage="pasted"] .pq-go { border-color: #2680eb; color: #4b9cf5; }
-.go .pq-go { background: rgba(38,128,235,.3); transform: translateY(-50%) scale(0.95); }
+.finding .pq-go { background: rgba(38,128,235,.3); transform: translateY(-50%) scale(0.95); }
 :is([data-stage="matched"], [data-stage="building"], [data-stage="built"]) .pq-go { opacity: 0; }
-#pqMini .pq-go { padding: 2px 11px; font-size: 11.5px; }
+#pqMini .pq-go { padding: 2px 8px; font-size: 11.5px; }
 :is(.demo.pq, #pqMini):is([data-stage="empty"], [data-stage="pasted"]) .sp-btn.build { opacity: 0; }
 .blk, .plain { position: relative; }
 [data-stage="pasted"] .pq-box { opacity: 1; color: transparent; }
@@ -625,3 +628,20 @@ img, a { -webkit-user-drag: none; }
   .card .go { background: var(--gold); border-color: var(--gold); color: #14110a; }
   .card:active { transform: scale(0.985); }
 }
+
+/* THE HOME PAGE'S CARDS, ONE CLICK TO DOWNLOAD (2026-11-23): the card is a div; an empty link covers it (the tool's
+   page), and the pill above that link downloads the tool. */
+.card-link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+/* Both download pills alike: outlined in gold with gold text, filled gold with dark text under the pointer. */
+.card .pill.dl { position: relative; z-index: 2; text-decoration: none; cursor: pointer; color: var(--gold); background: transparent; border-color: var(--gold); font-weight: 500; transition: background 160ms, color 160ms; }
+.card .pill.dl:hover, .card .pill.dl:focus-visible { background: var(--gold); color: #14110a; }
+
+/* THE LICENSE PAGE (pullquote-license.html, made by license.py from the panel's own agreement). */
+.lic { max-width: 760px; padding-top: 48px; padding-bottom: 72px; }
+.lic h1 { font-size: clamp(2rem, 5vw, 2.6rem); margin: 0 0 6px; }
+.lic h2 { font-size: 1.15rem; margin: 30px 0 8px; color: var(--text-strong); }
+.lic p, .lic li { color: var(--text); line-height: 1.65; max-width: 68ch; }
+.lic p { margin: 0 0 12px; }
+.lic ul { margin: 0 0 12px; padding-left: 1.2em; display: grid; gap: 6px; }
+.lic .lic-date { font: 0.875rem var(--mono); color: var(--dim); margin-bottom: 24px; }
+.lic a { color: var(--text-strong); }

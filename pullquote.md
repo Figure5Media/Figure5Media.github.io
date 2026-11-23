@@ -4,8 +4,7 @@
 
 Paste the script. Get the cut.
 
-[Download free](https://figure5media.com/pullquote#pricing)
-Download opens soon
+[Download free](https://figure5media.com/downloads/Pullquote.ccx)
 
 Free · Runs inside Premiere · Nothing uploaded
 
@@ -41,7 +40,7 @@ No trial, no account, no subscription.
 
 **$0**
 Free to use
-For Adobe Premiere 26.0 or later
+Premiere 26.0 or later · Mac and Windows
 
 - Every feature, no limits
 
@@ -49,10 +48,21 @@ For Adobe Premiere 26.0 or later
 
 - Builds a new sequence; your original stays as it was
 
-[Download Pullquote](https://figure5media.com/pullquote#pricing)
-Download opens soon. [Email us](mailto:info@figure5media.com?subject=Pullquote) to hear when.
+[Download Pullquote](https://figure5media.com/downloads/Pullquote.ccx)
+
+Free under the [license agreement](https://figure5media.com/pullquote-license), the same one the panel shows the first time it opens.
 
 Pullquote works best on a sequence where the cameras and recorder are already lined up. [Syncpoint](https://syncpoint.video/) does that in one click.
+
+## Install
+
+About a minute. You need Premiere 26.0 or later and the Creative Cloud app.
+
+1. **Open the file.** Double-click Pullquote.ccx. Creative Cloud asks whether to install a plugin from outside its store: click Install.
+2. **Open the panel.** In Premiere, choose Window > UXP Plugins > Pullquote. If it isn't there yet, restart Premiere.
+3. **Paste a script.** Accept the license the first time it opens, then paste your script and press Find Soundbites.
+
+The panel tells you when there's a new version: download it and open it the same way. To remove Pullquote, use Manage Plugins in the Creative Cloud app.
 
 ## Questions
 
@@ -76,6 +86,10 @@ Pullquote picks one and shows the other takes under it. Click through them and c
 
 ### What can't it do yet?
 Clips with a speed change, nested sequences and multicam clips aren't read yet. Your sequence's own markers don't carry into the new one.
+
+### Does it work on Windows?
+
+Yes. Pullquote runs the same on Mac and Windows.
 
 ### Why is it free?
 We built it for our own edits and it saved us hours, so we're sharing it. If it's useful to you, have a look at [Syncpoint](https://syncpoint.video/), which is how we pay for the time.

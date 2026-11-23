@@ -2,7 +2,7 @@
 <!-- Pullquote's page, laid out as syncpoint.video's: the name and one line, the demo, what it does, the
      price, the questions. data-download: "" until the installable file exists (shows "Download opens soon"),
      "on" once DOWNLOAD below points at it. -->
-<html lang="en" data-download="">
+<html lang="en" data-download="on">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -31,6 +31,9 @@
   "applicationCategory": "MultimediaApplication",
   "applicationSubCategory": "Video editing plugin",
   "softwareRequirements": "Adobe Premiere 26.0 or later, with transcripts made in Premiere's Text panel",
+  "operatingSystem": "macOS, Windows",
+  "softwareVersion": "1.0.0",
+  "downloadUrl": "https://figure5media.com/downloads/Pullquote.ccx",
   "image": "https://figure5media.com/og-pullquote.png",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Free to use; no account, no subscription" },
   "publisher": { "@type": "Organization", "name": "Figure 5 LLC", "url": "https://figure5media.com/" }
@@ -100,6 +103,14 @@
     },
     {
       "@type": "Question",
+      "name": "Does it work on Windows?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Pullquote runs the same on Mac and Windows."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Why is it free?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -125,6 +136,7 @@
     <nav class="links" aria-label="Sections">
       <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
+      <a href="#install">Install</a>
       <a href="#faq">FAQ</a>
       <a class="opt" href="guides.html">Guides</a>
     </nav>
@@ -174,8 +186,8 @@
         <div class="proj-search"><svg class="ic"><use href="#i-find"/></svg></div>
         <div class="proj-cols"><span>Name ↑</span><span>Frame Rate</span><span>Media Start</span></div>
         <div class="proj-row"><span><i class="lb y"></i><svg class="ic"><use href="#i-folder"/></svg>Footage</span><span></span><span></span></div>
-        <div class="proj-row"><span><i class="lb g"></i><svg width="13" height="13" style="flex:none" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg>Interview</span><span class="num">23.976 fps</span><span class="num">10:30:00:00</span></div>
-        <div class="proj-row"><span><i class="lb g"></i><svg width="13" height="13" style="flex:none" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg>Interview_synced</span><span class="num">23.976 fps</span><span class="num">10:30:00:00</span></div>
+        <div class="proj-row"><span><i class="lb g"></i><svg width="13" height="13" style="flex:none" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg>Interview</span><span class="num">23.976 fps</span><span class="num">00:00:00:00</span></div>
+        <div class="proj-row"><span><i class="lb g"></i><svg width="13" height="13" style="flex:none" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg>Interview_synced</span><span class="num">23.976 fps</span><span class="num">00:00:00:00</span></div>
         <div class="proj-row new"><span><i class="lb g"></i><svg width="13" height="13" style="flex:none" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg>Interview_synced – Script 1</span><span class="num">23.976 fps</span><span class="num">00:00:00:00</span></div>
       </div>
 
@@ -185,7 +197,7 @@
           <div class="pq-brand"><svg width="15" height="15" viewBox="0 0 16 16"><rect x="2.2" y="5.3" width="3.5" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="5.3" width="6.8" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="0" y="8.7" width="5.7" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="9" y="8.7" width="3.3" height="2.1" rx="0.4" fill="#7F9ECC"/><rect x="1.7" y="12.1" width="4" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="9" y="12.1" width="6.8" height="2.2" rx="0.4" fill="#62DBA8"/><rect x="5.7" y="0" width="3.3" height="2.4" rx="0.4" fill="#A8A8A8"/><rect x="6.75" y="1.5" width="1.2" height="14.5" fill="#A8A8A8"/></svg><span class="pq-name">Interview_synced</span><span class="pq-find"><svg class="ic"><use href="#i-find"/></svg>Search</span><span class="pq-back">Back to Script</span><span class="pq-edit">New Script</span><span class="pq-go">Find Soundbites</span></div>
           <div class="pq-meter"><i></i></div>
           <div class="pq-main">
-            <div class="pq-sum"><span class="pq-count"><span class="lg"><i class="sw found"></i>4 soundbites found</span><span class="lg"><i class="sw check"></i>1 to check</span><span class="lg"><i class="sw nf"></i>1 not found</span></span><span class="pq-building">Building · passage 4 of 5</span><span class="pq-links"><span class="pq-link">+ Add soundbite</span><span class="pq-link">Original script</span></span></div>
+            <div class="pq-sum"><span class="pq-count"><span class="lg"><i class="sw found"></i>4 found</span><span class="lg"><i class="sw check"></i>1 to check</span><span class="lg"><i class="sw nf"></i>1 not found</span></span><span class="pq-building">Building · passage 4 of 5</span><span class="pq-links"><span class="pq-link">+ Add soundbite</span><span class="pq-link">Original script</span></span></div>
             <div class="pq-hint">Click a line to go to it in the timeline</div>
             <div class="pq-doc">
             <div class="pq-box">Paste the script here</div>
@@ -208,12 +220,12 @@
           <div class="tl-tools">
             <svg class="on"><use href="#i-sel"/></svg><svg><use href="#i-trk"/></svg><svg><use href="#i-razor"/></svg><svg><use href="#i-pen"/></svg><svg><use href="#i-hand"/></svg><svg><use href="#i-type"/></svg>
           </div>
-          <div class="tcbox"><span class="tc" id="pqTc">10:30:00:00</span></div>
+          <div class="tcbox"><span class="tc" id="pqTc">00:00:00:00</span></div>
           <div class="ruler">
-            <span class="tick" style="left:0%" data-a="10:30:00:00" data-b="00:00:00:00">10:30:00:00</span>
-            <span class="tick" style="left:25%" data-a="10:45:00:00" data-b="00:00:30:00">10:45:00:00</span>
-            <span class="tick" style="left:50%" data-a="11:00:00:00" data-b="00:01:00:00">11:00:00:00</span>
-            <span class="tick" style="left:75%" data-a="11:15:00:00" data-b="00:01:30:00">11:15:00:00</span>
+            <span class="tick" style="left:0%" data-a="00:00:00:00" data-b="00:00:00:00">00:00:00:00</span>
+            <span class="tick" style="left:25%" data-a="00:22:30:00" data-b="00:00:30:00">00:22:30:00</span>
+            <span class="tick" style="left:50%" data-a="00:45:00:00" data-b="00:01:00:00">00:45:00:00</span>
+            <span class="tick" style="left:75%" data-a="01:07:30:00" data-b="00:01:30:00">01:07:30:00</span>
             <i class="minor"></i><i class="ticks"></i>
             <i class="phead"></i>
           </div>
@@ -291,7 +303,7 @@
       <div class="price-card">
         <div class="price">
           <b>$0</b>
-          <div class="price-tag"><span>Free to use</span><em>For Adobe Premiere 26.0 or later</em></div>
+          <div class="price-tag"><span>Free to use</span><em>Premiere 26.0 or later · Mac and Windows</em></div>
         </div>
         <ul>
           <li>Every feature, no limits</li>
@@ -302,8 +314,24 @@
           <a class="btn solid" href="#pricing" data-dl>Download Pullquote</a>
           <span class="soon">Download opens soon. <a href="mailto:info@figure5media.com?subject=Pullquote">Email us</a> to hear when.</span>
         </div>
+        <p class="fine">Free under the <a href="pullquote-license.html">license agreement</a>, the same one the panel shows the first time it opens.</p>
         <p class="fine">Pullquote works best on a sequence where the cameras and recorder are already lined up. <a href="https://syncpoint.video/">Syncpoint</a> does that in one click.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="wrap">
+      <div class="head center">
+        <h2>Install</h2>
+        <p>About a minute. You need Premiere 26.0 or later and the Creative Cloud app.</p>
+      </div>
+      <div class="promises steps">
+        <div><b>Open the file</b><span>Double-click Pullquote.ccx. Creative Cloud asks whether to install a plugin from outside its store: click Install.</span></div>
+        <div><b>Open the panel</b><span>In Premiere, choose Window &gt; UXP Plugins &gt; Pullquote. If it isn't there yet, restart Premiere.</span></div>
+        <div><b>Paste a script</b><span>Accept the license the first time it opens, then paste your script and press Find Soundbites.</span></div>
+      </div>
+      <p class="fine" style="margin: 18px auto 0; text-align: center;">The panel tells you when there's a new version: download it and open it the same way. To remove Pullquote, use Manage Plugins in the Creative Cloud app.</p>
     </div>
   </section>
 
@@ -318,6 +346,7 @@
         <details><summary>What if a line in the script was never said?</summary><p>It stays plain in the panel, outside the green and amber blocks, and is left out of the new sequence. The line under the sequence's name counts how many were found, how many to check, and how many weren't found.</p></details>
         <details><summary>What if the speaker said a line more than once?</summary><p>Pullquote picks one and shows the other takes under it. Click through them and choose the one you want before you build, or duplicate the block to keep two takes.</p></details>
         <details><summary>What can't it do yet?</summary><p>Clips with a speed change, nested sequences and multicam clips aren't read yet. Your sequence's own markers don't carry into the new one.</p></details>
+        <details><summary>Does it work on Windows?</summary><p>Yes. Pullquote runs the same on Mac and Windows.</p></details>
         <details><summary>Why is it free?</summary><p>We built it for our own edits and it saved us hours, so we're sharing it. If it's useful to you, have a look at <a href="https://syncpoint.video/">Syncpoint</a>, which is how we pay for the time.</p></details>
       </div>
     </div>
@@ -338,11 +367,15 @@
 
 <script src="demos.js"></script>
 <script>
-  /* The download: once the installable file exists, put its address here and set data-download="on"
-     on <html> above. Until then the buttons give way to "Download opens soon". */
-  var DOWNLOAD = "";
+  /* The download: a lasting address that never changes between versions (each release overwrites the file; a
+     copy named with its version sits beside it). data-download="" on <html> above puts "Download opens soon"
+     back. A press downloads the file and nothing else: the page stays where it is. */
+  var DOWNLOAD = "/downloads/Pullquote.ccx";
   if (document.documentElement.getAttribute("data-download") === "on" && DOWNLOAD)
-    document.querySelectorAll("[data-dl]").forEach(function (b) { b.href = DOWNLOAD; });
+    document.querySelectorAll("[data-dl]").forEach(function (b) {
+      b.href = DOWNLOAD;
+      b.setAttribute("download", "Pullquote.ccx");
+    });
 </script>
 </body>
 </html>
