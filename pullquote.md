@@ -18,7 +18,7 @@ Pullquote puts Premiere's transcripts to work. **Just paste a script and it find
 
 ## Made for real edits
 
-Client scripts are messy and interviews wander. Pullquote is built for both.
+Scripts can be messy and interviews can wander. Pullquote is built for both.
 
 **Your sequence is never changed** Pullquote reads it and builds a new one next to it.
 
