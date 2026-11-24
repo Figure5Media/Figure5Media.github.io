@@ -10,8 +10,6 @@ Free · Runs inside Premiere · Nothing uploaded
 
 Premiere already transcribes your interviews. **Pullquote puts that transcript to work: paste the client's script and it finds every line, then builds the soundbites into a new sequence, in script order, with every camera and the recorder in sync.** No hunting for selects by hand.
 
-Pullquote reads the transcript Premiere makes in its Text panel. Transcribe the clips first; without a transcript there is nothing to find.
-
 **Paste the script** Exactly as the client sent it. Names, timecodes, links and notes are set aside on their own.
 
 **Check the matches** Green was found. Amber says Check: click it to compare your script with what Premiere heard. Click any block to jump the playhead there.
