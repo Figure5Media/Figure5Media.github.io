@@ -77,13 +77,21 @@
   pullquote("pqDemo", document.getElementById("pqPlay"), [1800, 3300, 6300, 14200], 0);
 
   // The cards' light follows the pointer; sections rise in as they are reached.
-  [].forEach.call(document.querySelectorAll(".card"), function (c) {
+  [].forEach.call(document.querySelectorAll(".card, .lit"), function (c) {
     c.addEventListener("pointermove", function (e) {
       var r = c.getBoundingClientRect();
       c.style.setProperty("--mx", (e.clientX - r.left) + "px");
       c.style.setProperty("--my", (e.clientY - r.top) + "px");
     });
   });
+  // On a tool's page the header's button turns gold once the top's own button is out of view (under the header counts as out).
+  var bar = document.querySelector("header.top.follow"), heroBtn = document.querySelector(".hero .cta-row");
+  if (bar && heroBtn) {
+    if ("IntersectionObserver" in window) new IntersectionObserver(function (e) {
+      bar.classList.toggle("show", !e[0].isIntersecting);
+    }, { rootMargin: "-60px 0px 0px 0px" }).observe(heroBtn);
+    else bar.classList.add("show");
+  }
   if ("IntersectionObserver" in window) {
     var seen = new IntersectionObserver(function (es) {
       es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); seen.unobserve(e.target); } });

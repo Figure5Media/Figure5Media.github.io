@@ -44,6 +44,10 @@ h3 { font-size: 1.125rem; font-weight: 650; letter-spacing: -0.01em; }
 .btn.solid { background: var(--text-strong); color: #0a0a0b; }
 .btn.solid:hover { background: var(--gold); }
 .btn.small { padding: 7px 14px; font-size: 0.875rem; border-radius: 8px; }
+/* The main step on a tool's page, as the home page's download pills: outlined in gold with gold text, filled gold under the pointer. */
+.btn.gold { background: transparent; color: var(--gold); border-color: var(--gold); transition: background 160ms, color 160ms; }
+.btn.gold:hover, .btn.gold:focus-visible { background: var(--gold); color: #14110a; }
+h2 em { font-style: normal; background: linear-gradient(100deg, #ffd04f 0%, var(--gold) 55%, #ffb81a 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .btn.ghost { background: transparent; color: var(--text-strong); border-color: var(--line-2); }
 .btn.ghost:hover { border-color: #4a4a51; background: var(--surface); }
 /* While no seller is switched on (<html data-checkout="">), Buy gives way to a quiet line. */
@@ -328,13 +332,31 @@ main > section.cards { border-top: 0; padding-block: clamp(14px, 2vw, 24px) clam
 @media (max-width: 860px) { main > section.cards { grid-template-columns: 1fr; } }
 
 /* A TOOL'S OWN PAGE, laid out as syncpoint.video's. */
-.hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; padding-block: clamp(28px, 4vw, 52px) clamp(22px, 2.5vw, 30px); }
+.hero { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; padding-block: clamp(16px, 1.6vw, 20px) clamp(14px, 1.4vw, 16px); }
 .hero-name { display: grid; gap: 10px; justify-items: start; }
 .hero-buy { display: grid; gap: 10px; justify-items: end; }
 .hero-buy .fine { text-align: right; }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 750; line-height: 0.95; letter-spacing: -0.045em; }
+.hero h1 { font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 750; line-height: 0.95; letter-spacing: -0.045em; }
 .hero .tagline { font-size: clamp(1.25rem, 2.6vw, 1.625rem); }
-.top .btn { margin-left: 0; }
+/* The header's button is always there, at the far right: a quiet link like the others while the top's own button
+   is on screen, then gold with its gold outline once that has scrolled away. Nothing moves and nothing is left empty. On a page with no
+   button of its own at the top (the license), the header has no "follow" and the button is gold from the start. */
+.top .btn { margin-left: -8px; font-weight: 500; font-size: 0.9375rem; background: transparent; color: var(--gold); border-color: var(--gold); transition: color 200ms, border-color 200ms, background 160ms; }
+.top .btn:hover, .top .btn:focus-visible { background: var(--gold); color: #14110a; }
+.top.follow:not(.show) .btn { color: var(--dim); border-color: transparent; }
+.top.follow:not(.show) .btn:hover { color: var(--gold); background: transparent; }
+/* The whole demo on a tool's page: a soft light behind it in the tool's colour. */
+#pqDemo { box-shadow: 0 30px 80px -20px rgba(0,0,0,.75), 0 0 140px -30px rgba(123, 237, 201, .26); }
+/* Boxes lit by the pointer, as the home page's cards are: the tool's colour inside, gold along the edge. */
+.lit { position: relative; isolation: isolate; }
+.lit::before { content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; opacity: 0; transition: opacity 300ms; pointer-events: none;
+  background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(123, 237, 201, .11), transparent 62%); }
+.lit.edge::after { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 1px; pointer-events: none; opacity: 0; transition: opacity 300ms;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 194, 31, .9), rgba(255, 194, 31, .15) 60%, transparent 75%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; }
+.lit:hover::before, .lit:hover::after { opacity: 1; }
+.promises b { transition: color 200ms; } .promises .lit:hover b { color: var(--gold); }
+.promises .lit:nth-child(3n + 1) { padding-left: 24px; margin-left: -24px; }
 @media (max-width: 760px) { .hero { flex-direction: column; align-items: center; text-align: center; gap: 20px; } .hero-name, .hero-buy { justify-items: center; } .hero-buy .fine { text-align: center; } .cta-row { justify-content: center; } }
 @media (max-width: 720px) { .top nav.links.sections { display: none; } .top .btn { margin-left: auto; } }
 .demo-wrap { padding-bottom: clamp(36px, 5vw, 56px); }
