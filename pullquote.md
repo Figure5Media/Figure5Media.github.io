@@ -8,7 +8,7 @@ Paste the script. Get the cut.
 
 Free · Runs inside Premiere · Nothing uploaded
 
-Premiere already transcribes your interviews. **Pullquote puts that transcript to work: paste the client's script and it finds every line, then builds the soundbites into a new sequence, in script order, with every camera and the recorder in sync.** No hunting for selects by hand.
+Pullquote puts Premiere's transcripts to work. **Just paste a script and it finds every line, then builds you a new sequence with your soundbites in script order.** No more hunting manually for selects.
 
 **Paste the script** Exactly as the client sent it. Names, timecodes, links and notes are set aside on their own.
 

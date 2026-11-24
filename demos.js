@@ -84,6 +84,26 @@
       c.style.setProperty("--my", (e.clientY - r.top) + "px");
     });
   });
+  /* On Pullquote's page the top ends at the paragraph under the demo. The demo is drawn at its own size and, where
+     the window is too short for both, the whole drawing is scaled down as one picture: nothing inside it is
+     squeezed. Phones are left alone. */
+  (function () {
+    var d = document.getElementById("pqDemo"), lede = document.querySelector(".demo-lede");
+    if (!d || !lede) return;
+    function fit() {
+      d.style.zoom = "";
+      if (window.innerWidth <= 760) return;
+      var box = d.getBoundingClientRect(), top = box.top + window.pageYOffset;
+      var under = lede.getBoundingClientRect().height + parseFloat(getComputedStyle(lede).marginTop) + 16;
+      var z = Math.max(0.62, Math.min(1, (window.innerHeight - top - under) / box.height));
+      if (z < 1) d.style.zoom = z;
+    }
+    fit();
+    window.addEventListener("resize", fit);
+    window.addEventListener("load", fit);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+  })();
+
   // On a tool's page the header's button turns gold once the top's own button is out of view (under the header counts as out).
   var bar = document.querySelector("header.top.follow"), heroBtn = document.querySelector(".hero .cta-row");
   if (bar && heroBtn) {
