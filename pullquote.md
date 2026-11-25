@@ -83,7 +83,7 @@ It stays plain in the panel, outside the green and amber blocks, and is left out
 Pullquote picks one and shows the other takes under it. Click through them and choose the one you want before you build, or duplicate the block to keep two takes.
 
 ### What can't it do yet?
-Clips with a speed change, nested sequences and multicam clips aren't read yet. Your sequence's own markers don't carry into the new one.
+Clips with a speed change aren't read yet. Your sequence's own markers don't carry into the new one.
 
 ### Does it work on Windows?
 
