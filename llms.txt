@@ -11,7 +11,7 @@
 - If a line was said more than once, the other takes can be chosen. Words can be cut, blocks reordered or duplicated, and extra soundbites added before building.
 - Everything runs on the editor's computer inside Premiere; the script, transcript and footage are not uploaded.
 - A faster way to make a paper edit, pull selects or cut an interview to a script. Premiere's own Paper Edit builds a cut from passages the editor finds and highlights by hand; Pullquote starts from the script and finds them.
-- Mac and Windows. Free download, version 1.0.0: https://figure5media.com/downloads/Pullquote.ccx (double-click it to install through Creative Cloud, then Window > UXP Plugins > Pullquote in Premiere).
+- Mac and Windows. Free download, version 1.0.1: https://figure5media.com/downloads/Pullquote.ccx (double-click it to install through Creative Cloud, then Window > UXP Plugins > Pullquote in Premiere).
 - Nested sequences and multicam clips are read like any other clip. Not yet read: clips with a speed change.
 
 ## Syncpoint ($99, pay once)
